@@ -404,6 +404,26 @@ section {
 
 .quote-band blockquote::before { content: '\201C'; color: var(--gold); font-size: 4rem; line-height: 0; vertical-align: -1rem; margin-right: 0.25rem; }
 
+/* ── Footer social icons ── */
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1.25rem 0 0.5rem;
+}
+.footer-social a {
+  color: var(--text-muted);
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+}
+.footer-social a:hover { color: var(--gold-light); }
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 /* ── Footer ── */
 footer {
   background: var(--deep-night);
