@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Session – RainbowStar</title>
+  <meta name="description" content="Book a healing session, oracle reading, or consultation with RainbowStar." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index.html">RainbowStar</a>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="sessions.html">Sessions</a></li>
+      <li><a href="oracle.html">Oracle</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="book.html">Book</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div style="position:relative; min-height:45vh; display:flex; align-items:flex-end; overflow:hidden; background: var(--cosmic);">
+    <div style="position:absolute;inset:0;">
+      <img src="../images/painting-wave.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.2;" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,11,24,0.4),rgba(10,11,24,0.9));"></div>
+    </div>
+    <div style="position:relative; z-index:2; padding: 8rem 2rem 4rem; max-width:1000px; margin:0 auto; width:100%;">
+      <span class="section-label">Reserve Your Space</span>
+      <h1 class="section-title" style="font-size: clamp(2.2rem, 5vw, 4rem);">Book a Session</h1>
+      <p style="color:var(--white-soft); font-style:italic; max-width:520px; font-size:1.1rem;">
+        Sessions are held with care, presence, and deep intentionality. I look forward to working with you.
+      </p>
+    </div>
+  </div>
+
+  <!-- BOOKING -->
+  <section style="background: var(--deep-night);">
+    <div class="section-inner">
+      <div class="two-col fade-in" style="gap: 5rem; align-items:start;">
+
+        <!-- Left: info -->
+        <div>
+          <span class="section-label">Before You Book</span>
+          <h2 class="section-title" style="font-size:1.8rem;">What to know</h2>
+
+          <div style="display:flex; flex-direction:column; gap:2rem; margin-top:1.5rem;">
+            <div>
+              <p style="font-family:var(--font-display); font-size:0.62rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.5rem;">LOCATION</p>
+              <p style="color:var(--white-soft);">Sessions are held in a private, sacred space. Address shared upon booking confirmation.</p>
+            </div>
+            <div>
+              <p style="font-family:var(--font-display); font-size:0.62rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.5rem;">DURATION</p>
+              <p style="color:var(--white-soft);">Sessions typically run 60–90 minutes. Allow time before and after to arrive and integrate.</p>
+            </div>
+            <div>
+              <p style="font-family:var(--font-display); font-size:0.62rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.5rem;">WHAT TO WEAR</p>
+              <p style="color:var(--white-soft);">Comfortable, loose clothing. You remain fully clothed throughout the session.</p>
+            </div>
+            <div>
+              <p style="font-family:var(--font-display); font-size:0.62rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.5rem;">PAYMENT</p>
+              <p style="color:var(--white-soft);">Handled securely through the booking system. A deposit may be required to hold your space.</p>
+            </div>
+            <div>
+              <p style="font-family:var(--font-display); font-size:0.62rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.5rem;">QUESTIONS?</p>
+              <p style="color:var(--white-soft);">Reach out: <a href="mailto:rainbowstar.inc.creative@gmail.com" style="color:var(--gold-light);">rainbowstar.inc.creative@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Acuity embed -->
+        <div style="flex:1;">
+          <span class="section-label">Scheduling</span>
+          <h2 class="section-title" style="font-size:1.8rem;">Choose your time</h2>
+
+          <!-- 
+            ════════════════════════════════════════════
+            ACUITY SCHEDULING EMBED
+            ════════════════════════════════════════════
+            Once your Acuity account is set up:
+            1. Go to Acuity → Integrations → Embed Scheduler
+            2. Copy your embed code
+            3. Replace the placeholder div below with your embed code
+
+            It will look something like:
+            <iframe src="https://app.acuityscheduling.com/schedule.php?owner=YOURCODE"
+              width="100%" height="800" frameBorder="0"></iframe>
+            ════════════════════════════════════════════
+          -->
+          <div style="margin-top:1.5rem; border:1px solid rgba(201,168,76,0.2); padding:3rem 2rem; background:rgba(255,255,255,0.02); text-align:center;">
+            <span style="font-size:2rem; display:block; margin-bottom:1rem;">📅</span>
+            <p style="font-family:var(--font-display); font-size:0.65rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:1rem;">BOOKING CALENDAR</p>
+            <p style="color:var(--text-muted); font-style:italic; margin-bottom:1.5rem;">
+              Your Acuity scheduling calendar will appear here once connected.<br>
+              See the code comment above for setup instructions.
+            </p>
+            <a href="mailto:rainbowstar.inc.creative@gmail.com" class="btn">Book via Email for Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-logo">RainbowStar</span>
+    <p style="font-family:var(--font-display); font-size:0.6rem; letter-spacing:0.15em; color:var(--text-muted); margin-bottom:0.5rem;">RainbowStar Inc.</p>
+    <p>rainbowstar.net &nbsp;·&nbsp; <a href="mailto:rainbowstar.inc.creative@gmail.com">rainbowstar.inc.creative@gmail.com</a></p>
+    <p style="margin-top:0.5rem; font-size:0.75rem;">© 2025 RainbowStar Inc. All paintings and photography are RainbowStarOriginals. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

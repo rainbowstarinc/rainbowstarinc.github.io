@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Gallery – RainbowStar</title>
+  <meta name="description" content="Original paintings by RainbowStar. Sacred art for your home, altar, or healing space." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .gallery-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin: 2rem 0 3rem;
+    }
+    .filter-btn {
+      font-family: var(--font-display);
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.2rem;
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--text-muted);
+      background: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--cosmic);
+      border: 1px solid rgba(201,168,76,0.08);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .gallery-item:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-3px);
+    }
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      filter: saturate(0.9);
+    }
+    .gallery-item:hover img { transform: scale(1.05); filter: saturate(1.15); }
+    .gallery-caption {
+      padding: 0.9rem 1.1rem;
+      background: rgba(10,11,24,0.97);
+      border-top: 1px solid rgba(201,168,76,0.08);
+    }
+    .gallery-caption h3 {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.2rem;
+    }
+    .gallery-caption p { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(5,6,15,0.97);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 88vw;
+      max-height: 78vh;
+      object-fit: contain;
+      border: 1px solid rgba(201,168,76,0.15);
+      box-shadow: 0 0 80px rgba(0,0,0,0.8);
+    }
+    .lightbox-controls { display: flex; align-items: center; gap: 2rem; }
+    .lightbox-btn {
+      font-family: var(--font-display);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--white-soft);
+      cursor: pointer;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 0.5rem 1.2rem;
+      transition: all 0.3s;
+    }
+    .lightbox-btn:hover { border-color: var(--gold); color: var(--gold-light); }
+    .lightbox-title {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      min-width: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index.html">RainbowStar</a>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="sessions.html">Sessions</a></li>
+      <li><a href="oracle.html">Oracle</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="book.html">Book</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div style="position:relative; min-height:50vh; display:flex; align-items:flex-end; overflow:hidden;">
+    <div style="position:absolute;inset:0;">
+      <img src="../images/painting-swirl-petals.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.28;filter:saturate(1.2);" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(10,11,24,0.4), rgba(10,11,24,0.92));"></div>
+    </div>
+    <div style="position:relative; z-index:2; padding: 8rem 2rem 4rem; max-width:1200px; margin:0 auto; width:100%;">
+      <span class="section-label">Original Works</span>
+      <h1 class="section-title" style="font-size: clamp(2.2rem, 5vw, 4rem);">The Gallery</h1>
+      <p style="color:var(--white-soft); font-style:italic; max-width:540px; font-size:1.1rem;">
+        22 original paintings — transmissions of frequency held in pigment and canvas.
+      </p>
+    </div>
+  </div>
+
+  <section style="background: var(--deep-night);">
+    <div class="section-inner" style="max-width: 1200px;">
+
+      <div class="gallery-filters fade-in">
+        <button class="filter-btn active" onclick="filterGallery('all', this)">All Works</button>
+        <button class="filter-btn" onclick="filterGallery('flow', this)">Flow & Movement</button>
+        <button class="filter-btn" onclick="filterGallery('sacred', this)">Sacred Symbol</button>
+        <button class="filter-btn" onclick="filterGallery('body', this)">Body & Spirit</button>
+        <button class="filter-btn" onclick="filterGallery('mandala', this)">Mandala</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery">
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(0)">
+          <img src="../images/hero-painting.jpeg" alt="RainbowStar" loading="lazy" />
+          <div class="gallery-caption"><h3>RainbowStar</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(1)">
+          <img src="../images/painting-night-arc.jpeg" alt="Night Arc" loading="lazy" />
+          <div class="gallery-caption"><h3>Night Arc</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(2)">
+          <img src="../images/painting-blue-flow.jpeg" alt="River of Stars" loading="lazy" />
+          <div class="gallery-caption"><h3>River of Stars</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(3)">
+          <img src="../images/painting-wave.jpeg" alt="The Turning" loading="lazy" />
+          <div class="gallery-caption"><h3>The Turning</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(4)">
+          <img src="../images/painting-pastel-vortex.jpeg" alt="Pastel Vortex" loading="lazy" />
+          <div class="gallery-caption"><h3>Pastel Vortex</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(5)">
+          <img src="../images/painting-sunflower.jpeg" alt="Solar Bloom" loading="lazy" />
+          <div class="gallery-caption"><h3>Solar Bloom</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(6)">
+          <img src="../images/painting-swirl-petals.jpeg" alt="Swirl of Life" loading="lazy" />
+          <div class="gallery-caption"><h3>Swirl of Life</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(7)">
+          <img src="../images/painting-petals.jpeg" alt="Ten Thousand Petals" loading="lazy" />
+          <div class="gallery-caption"><h3>Ten Thousand Petals</h3><p>Large format · Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="sacred" onclick="openLightbox(8)">
+          <img src="../images/painting-reiki-symbol.jpeg" alt="Cho Ku Rei" loading="lazy" />
+          <div class="gallery-caption"><h3>Cho Ku Rei</h3><p>Sacred symbol · Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="sacred" onclick="openLightbox(9)">
+          <img src="../images/painting-wheel.jpeg" alt="Medicine Wheel" loading="lazy" />
+          <div class="gallery-caption"><h3>Medicine Wheel</h3><p>Mixed media on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="sacred" onclick="openLightbox(10)">
+          <img src="../images/painting-sacred-square.jpeg" alt="Sacred Square" loading="lazy" />
+          <div class="gallery-caption"><h3>Sacred Square</h3><p>Acrylic on burlap</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="sacred" onclick="openLightbox(11)">
+          <img src="../images/painting-star-compass.jpeg" alt="Star Compass" loading="lazy" />
+          <div class="gallery-caption"><h3>Star Compass</h3><p>Oil pastel on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="body" onclick="openLightbox(12)">
+          <img src="../images/painting-heart.jpeg" alt="Living Heart" loading="lazy" />
+          <div class="gallery-caption"><h3>Living Heart</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="body" onclick="openLightbox(13)">
+          <img src="../images/painting-lungs.jpeg" alt="Breath of Life" loading="lazy" />
+          <div class="gallery-caption"><h3>Breath of Life</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="body" onclick="openLightbox(14)">
+          <img src="../images/painting-golden-fish.jpeg" alt="Golden Beings" loading="lazy" />
+          <div class="gallery-caption"><h3>Golden Beings</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="body" onclick="openLightbox(15)">
+          <img src="../images/painting-seed.jpeg" alt="The Seed" loading="lazy" />
+          <div class="gallery-caption"><h3>The Seed</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="mandala" onclick="openLightbox(16)">
+          <img src="../images/painting-earth-mandala.jpeg" alt="Earth Mandala" loading="lazy" />
+          <div class="gallery-caption"><h3>Earth Mandala</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="mandala" onclick="openLightbox(17)">
+          <img src="../images/painting-cosmos.jpeg" alt="Planetary Dance" loading="lazy" />
+          <div class="gallery-caption"><h3>Planetary Dance</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="mandala" onclick="openLightbox(18)">
+          <img src="../images/painting-solar-spiral.jpeg" alt="Solar Gate" loading="lazy" />
+          <div class="gallery-caption"><h3>Solar Gate</h3><p>Acrylic on burlap</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="mandala" onclick="openLightbox(19)">
+          <img src="../images/painting-flame-mandala.jpeg" alt="Flame Mandala" loading="lazy" />
+          <div class="gallery-caption"><h3>Flame Mandala</h3><p>Oil pastel on paper</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(20)">
+          <img src="../images/painting-flower-burst.jpeg" alt="Genesis" loading="lazy" />
+          <div class="gallery-caption"><h3>Genesis</h3><p>Acrylic on canvas</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-cat="mandala" onclick="openLightbox(21)">
+          <img src="../images/painting-forest.jpeg" alt="Forest Intelligence" loading="lazy" />
+          <div class="gallery-caption"><h3>Forest Intelligence</h3><p>Acrylic on canvas</p></div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(22)">
+          <img src="../images/painting-lake-spirit.jpeg" alt="Lake Spirit" loading="lazy" />
+          <div class="gallery-caption"><h3>Lake Spirit</h3><p>Acrylic on canvas</p></div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="mandala" onclick="openLightbox(23)">
+          <img src="../images/painting-eclipse-top.jpeg" alt="Eclipse I" loading="lazy" />
+          <div class="gallery-caption"><h3>Eclipse I</h3><p>Acrylic on canvas</p></div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="mandala" onclick="openLightbox(24)">
+          <img src="../images/painting-eclipse-bottom.jpeg" alt="Eclipse II" loading="lazy" />
+          <div class="gallery-caption"><h3>Eclipse II</h3><p>Acrylic on canvas</p></div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(25)">
+          <img src="../images/painting-cosmic-vortex.jpeg" alt="Cosmic Vortex" loading="lazy" />
+          <div class="gallery-caption"><h3>Cosmic Vortex</h3><p>Acrylic on canvas</p></div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="flow" onclick="openLightbox(26)">
+          <img src="../images/painting-garden-impressionist.jpeg" alt="Garden of Light" loading="lazy" />
+          <div class="gallery-caption"><h3>Garden of Light</h3><p>Acrylic on canvas</p></div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="body" onclick="openLightbox(27)">
+          <img src="../images/painting-sun-tree.jpeg" alt="Sun & Tree" loading="lazy" />
+          <div class="gallery-caption"><h3>Sun & Tree</h3><p>Acrylic on canvas</p></div>
+        </div>
+
+      </div>
+
+      <div class="fade-in" style="text-align:center; margin-top:5rem; padding:3rem 2rem; border:1px solid rgba(201,168,76,0.15);">
+        <span class="section-label">Acquire</span>
+        <h2 class="section-title" style="text-align:center; font-size:1.8rem;">Interested in a piece?</h2>
+        <p style="color:var(--white-soft); font-style:italic; margin-bottom:2rem; max-width:480px; margin-left:auto; margin-right:auto;">
+          Each work is original and one-of-a-kind. Reach out to inquire about availability, sizing, and pricing. Commissions are also welcome.
+        </p>
+        <a href="mailto:rainbowstar.inc.creative@gmail.com" class="btn btn-solid">Get in Touch</a>
+      </div>
+      <div class="fade-in" style="text-align:center; margin-top:3rem; padding:2rem; border-top:1px solid rgba(201,168,76,0.1);">
+        <p style="font-family:var(--font-display); font-size:0.58rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.5rem;">PHOTOGRAPHY</p>
+        <p style="color:var(--text-muted); font-style:italic; font-size:0.9rem;">All photography throughout this site is also RainbowStarOriginals — images of plants, places, and the living world that inform and inspire the healing practice.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-controls">
+      <button class="lightbox-btn" onclick="prevImage()">← Prev</button>
+      <span class="lightbox-title" id="lightbox-title"></span>
+      <button class="lightbox-btn" onclick="nextImage()">Next →</button>
+    </div>
+    <button class="lightbox-btn" style="position:absolute; top:1.5rem; right:2rem;" onclick="closeLightbox()">Close ✕</button>
+  </div>
+
+  <footer>
+    <span class="footer-logo">RainbowStar</span>
+    <p style="font-family:var(--font-display); font-size:0.6rem; letter-spacing:0.15em; color:var(--text-muted); margin-bottom:0.5rem;">RainbowStar Inc.</p>
+    <p>rainbowstar.net &nbsp;·&nbsp; <a href="mailto:rainbowstar.inc.creative@gmail.com">rainbowstar.inc.creative@gmail.com</a></p>
+    <p style="margin-top:0.5rem; font-size:0.75rem;">© 2025 RainbowStar Inc. All paintings and photography are RainbowStarOriginals. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    const paintings = [
+      { src: '../images/hero-painting.jpeg', title: 'RainbowStar' },
+      { src: '../images/painting-night-arc.jpeg', title: 'Night Arc' },
+      { src: '../images/painting-blue-flow.jpeg', title: 'River of Stars' },
+      { src: '../images/painting-wave.jpeg', title: 'The Turning' },
+      { src: '../images/painting-pastel-vortex.jpeg', title: 'Pastel Vortex' },
+      { src: '../images/painting-sunflower.jpeg', title: 'Solar Bloom' },
+      { src: '../images/painting-swirl-petals.jpeg', title: 'Swirl of Life' },
+      { src: '../images/painting-petals.jpeg', title: 'Ten Thousand Petals' },
+      { src: '../images/painting-reiki-symbol.jpeg', title: 'Cho Ku Rei' },
+      { src: '../images/painting-wheel.jpeg', title: 'Medicine Wheel' },
+      { src: '../images/painting-sacred-square.jpeg', title: 'Sacred Square' },
+      { src: '../images/painting-star-compass.jpeg', title: 'Star Compass' },
+      { src: '../images/painting-heart.jpeg', title: 'Living Heart' },
+      { src: '../images/painting-lungs.jpeg', title: 'Breath of Life' },
+      { src: '../images/painting-golden-fish.jpeg', title: 'Golden Beings' },
+      { src: '../images/painting-seed.jpeg', title: 'The Seed' },
+      { src: '../images/painting-earth-mandala.jpeg', title: 'Earth Mandala' },
+      { src: '../images/painting-cosmos.jpeg', title: 'Planetary Dance' },
+      { src: '../images/painting-solar-spiral.jpeg', title: 'Solar Gate' },
+      { src: '../images/painting-flame-mandala.jpeg', title: 'Flame Mandala' },
+      { src: '../images/painting-flower-burst.jpeg', title: 'Genesis' },
+      { src: '../images/painting-forest.jpeg', title: 'Forest Intelligence' },
+      { src: '../images/painting-lake-spirit.jpeg', title: 'Lake Spirit' },
+      { src: '../images/painting-eclipse-top.jpeg', title: 'Eclipse I' },
+      { src: '../images/painting-eclipse-bottom.jpeg', title: 'Eclipse II' },
+      { src: '../images/painting-cosmic-vortex.jpeg', title: 'Cosmic Vortex' },
+      { src: '../images/painting-garden-impressionist.jpeg', title: 'Garden of Light' },
+      { src: '../images/painting-sun-tree.jpeg', title: 'Sun & Tree' },
+    ];
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function updateLightbox() {
+      document.getElementById('lightbox-img').src = paintings[currentIndex].src;
+      document.getElementById('lightbox-title').textContent = `${paintings[currentIndex].title}  (${currentIndex + 1} / ${paintings.length})`;
+    }
+    function nextImage() { currentIndex = (currentIndex + 1) % paintings.length; updateLightbox(); }
+    function prevImage() { currentIndex = (currentIndex - 1 + paintings.length) % paintings.length; updateLightbox(); }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    });
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – RainbowStar</title>
+  <meta name="description" content="About the practitioner and artist behind RainbowStar." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 3rem;
+    }
+    .photo-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      filter: saturate(0.9);
+      transition: filter 0.4s, transform 0.4s;
+    }
+    .photo-grid img:hover {
+      filter: saturate(1.1);
+      transform: scale(1.02);
+    }
+    .photo-grid .wide {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
+    }
+    .photo-grid .tall {
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+    @media (max-width: 600px) {
+      .photo-grid { grid-template-columns: 1fr 1fr; }
+      .photo-grid .wide { grid-column: span 2; }
+      .photo-grid .tall { grid-row: span 1; aspect-ratio: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index.html">RainbowStar</a>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="sessions.html">Sessions</a></li>
+      <li><a href="oracle.html">Oracle</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="book.html">Book</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO — portrait at lake -->
+  <div style="position:relative; min-height:85vh; display:flex; align-items:flex-end; overflow:hidden;">
+    <div style="position:absolute;inset:0;">
+      <img src="../images/photo-portrait-beach.jpeg" alt="RainbowStar practitioner at the beach in Hawaii" style="width:100%;height:100%;object-fit:cover;object-position: center 30%;" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(10,11,24,0.1) 0%, rgba(10,11,24,0.85) 100%);"></div>
+    </div>
+    <div style="position:relative; z-index:2; padding: 4rem 2rem 5rem; max-width:1000px; margin:0 auto; width:100%;">
+      <span class="section-label">The Practitioner</span>
+      <h1 class="section-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">About RainbowStar</h1>
+      <p style="color:var(--white-soft); font-style:italic; max-width:520px; font-size:1.15rem; line-height:1.8;">
+        Healer. Painter. Plant walker. Student of the living world.
+      </p>
+    </div>
+  </div>
+
+  <!-- BIO -->
+  <section style="background: var(--deep-night);">
+    <div class="section-inner">
+      <div class="two-col fade-in" style="gap:5rem; align-items:start;">
+
+        <!-- Portrait -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <img src="../images/photo-portrait-sparkle.jpeg"
+               alt="RainbowStar — sparkle portrait"
+               style="width:100%; border:1px solid rgba(201,168,76,0.2); object-fit:cover;" />
+          <img src="../images/photo-portrait-umbrella.jpeg"
+               alt="Practitioner with flower umbrella"
+               style="width:100%; border:1px solid rgba(201,168,76,0.15); object-fit:cover;" />
+        </div>
+
+        <!-- Bio text -->
+        <div class="about-content">
+          <span class="section-label">The Story</span>
+          <h2 class="section-title" style="font-size:2rem;">In my own words</h2>
+
+          <!--
+            ════════════════════════════════════════════
+            YOUR BIO — write it here in your own voice.
+            Delete this comment and these placeholder
+            paragraphs and replace with your story.
+
+            Some prompts if helpful:
+            - How did you come to this work?
+            - What traditions, teachers, or lineages shaped you?
+            - What moves you, what do you believe?
+            - How long have you been painting? Practicing?
+            - What does RainbowStar mean to you?
+            ════════════════════════════════════════════
+          -->
+          <p style="color:var(--white-soft); margin-bottom:1.5rem;">
+            RainbowStar emerged from years of walking the intersection of creative expression and healing arts — discovering that the body, the brush, and the cosmos are all speaking the same language.
+          </p>
+          <p style="color:var(--white-soft); margin-bottom:1.5rem;">
+            I am a practitioner, a painter, and a student of the living world. My work is rooted in a deep reverence for the body's intelligence, the wisdom of plant medicines, and the organizing field of love that underlies all things.
+          </p>
+          <p style="color:var(--white-soft); margin-bottom:1.5rem;">
+            Each painting I make is a transmission. Each session I hold is a collaboration with something larger. I show up as a conduit — and the healing, as always, belongs to you.
+          </p>
+
+          <!-- Training box -->
+          <div style="border:1px solid rgba(201,168,76,0.15); padding:2rem; background:rgba(255,255,255,0.02); margin-top:2rem;">
+            <p style="font-family:var(--font-display); font-size:0.6rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:1.2rem;">TRAINING & LINEAGE</p>
+            <!--
+              Add your certifications here. Examples:
+              <p style="color:var(--white-soft); font-size:0.95rem; margin-bottom:0.6rem;">· Reiki Master Teacher</p>
+              <p style="color:var(--white-soft); font-size:0.95rem; margin-bottom:0.6rem;">· Somatic Bodywork Practitioner</p>
+              <p style="color:var(--white-soft); font-size:0.95rem; margin-bottom:0.6rem;">· Plant Spirit Medicine Studies</p>
+            -->
+            <p style="color:var(--text-muted); font-style:italic; font-size:0.95rem;">Add your certifications and training here.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD IN PHOTOS -->
+  <section style="background: var(--navy);">
+    <div class="section-inner" style="max-width: 1100px;">
+      <div class="fade-in" style="text-align:center; margin-bottom:1rem;">
+        <span class="section-label">The World I Walk In</span>
+        <h2 class="section-title" style="text-align:center;">Plants, places & medicine</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="photo-grid fade-in">
+        <img src="../images/photo-borage.jpeg" alt="Borage flowers" loading="lazy" />
+        <img src="../images/photo-blue-flowers.jpeg" alt="Blue forget-me-nots" loading="lazy" />
+        <img src="../images/photo-fern-fiddle.jpeg" alt="Fern fiddlehead" loading="lazy" class="tall" style="aspect-ratio:3/4; object-fit:cover;" />
+        <img src="../images/photo-rainbow-cemetery.jpeg" alt="Rainbow over the landscape" loading="lazy" class="wide" style="aspect-ratio:16/9; object-fit:cover;" />
+        <img src="../images/photo-red-sun.jpeg" alt="Red sun through smoke and trees" loading="lazy" />
+        <img src="../images/photo-hydrangea.jpeg" alt="Hydrangea petals" loading="lazy" />
+        <img src="../images/photo-rainbow-rose.jpeg" alt="Rainbow rose" loading="lazy" />
+        <img src="../images/photo-dandelion-macro.jpeg" alt="Dandelion macro" loading="lazy" />
+        <img src="../images/photo-poppy.jpeg" alt="Red poppy" loading="lazy" />
+        <img src="../images/photo-golden-rose.jpeg" alt="Golden rose" loading="lazy" />
+        <img src="../images/photo-shooting-stars.jpeg" alt="Shooting star wildflowers" loading="lazy" />
+        <img src="../images/photo-turkey-tail.jpeg" alt="Turkey tail fungi" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CRYSTAL TOOLS -->
+  <section style="background: var(--deep-night);">
+    <div class="section-inner">
+      <div class="two-col fade-in" style="gap:4rem; align-items:center;">
+        <div>
+          <img src="../images/photo-crystal-tools.jpeg" alt="Crystal healing tools" style="width:100%; border:1px solid rgba(201,168,76,0.2);" />
+        </div>
+        <div>
+          <span class="section-label">The Tools</span>
+          <h2 class="section-title" style="font-size:1.9rem;">What I work with</h2>
+          <p style="color:var(--white-soft); margin-bottom:1.2rem;">
+            Crystals, tuning forks, feathers, plant essences, oracle cards — each tool is a bridge between worlds. They are amplifiers of what is already present in the field.
+          </p>
+          <p style="color:var(--white-soft);">
+            I don't use these tools the same way twice. The session leads; the tools follow.
+          </p>
+          <br>
+          <a href="sessions.html" class="btn">Explore Sessions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALING ROOM -->
+  <section style="background: var(--navy);">
+    <div class="section-inner">
+      <div class="two-col fade-in" style="gap:4rem; align-items:center;">
+        <div>
+          <span class="section-label">The Space</span>
+          <h2 class="section-title" style="font-size:1.9rem;">The healing room</h2>
+          <p style="color:var(--white-soft); margin-bottom:1.2rem;">
+            Sessions take place in a private, warm, sacred space — held by original paintings, soft light, and intentional care. You will be comfortable.
+          </p>
+          <p style="color:var(--white-soft);">
+            Location is shared upon booking. I'm based in the Pacific Northwest.
+          </p>
+          <br>
+          <a href="book.html" class="btn btn-solid">Book a Session</a>
+        </div>
+        <div>
+          <img src="../images/photo-healing-room.jpeg" alt="The healing room" style="width:100%; border:1px solid rgba(201,168,76,0.2);" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE PHOTOS — the joyful ones -->
+  <section style="background: var(--deep-night); padding: 4rem 2rem;">
+    <div class="section-inner" style="max-width:900px;">
+      <div class="photo-grid fade-in" style="grid-template-columns: repeat(3,1fr); gap:0.75rem;">
+        <img src="../images/photo-feet-clover.jpeg" alt="Standing in clover" loading="lazy" style="aspect-ratio:1;object-fit:cover;" />
+        <img src="../images/photo-flower-salad.jpeg" alt="Flower salad" loading="lazy" style="aspect-ratio:1;object-fit:cover;" />
+        <img src="../images/photo-black-cat.jpeg" alt="Black cat" loading="lazy" style="aspect-ratio:1;object-fit:cover;" />
+        <img src="../images/photo-red-sun.jpeg" alt="Red sun through forest" loading="lazy" style="aspect-ratio:16/9;object-fit:cover;object-position:center 40%; grid-column:span 3;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-band">
+    <blockquote>
+      Healing is not the absence of something — it is the presence of everything you already are.
+    </blockquote>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--navy); text-align:center;">
+    <div class="section-inner fade-in">
+      <span class="section-label">Connect</span>
+      <h2 class="section-title" style="text-align:center;">Get in touch</h2>
+      <div class="divider"></div>
+      <p style="color:var(--white-soft); max-width:440px; margin:0 auto 2rem; font-style:italic;">
+        Questions, curiosities, or a sense that this is for you — reach out.
+      </p>
+      <a href="mailto:rainbowstar.inc.creative@gmail.com" class="btn btn-solid">rainbowstar.inc.creative@gmail.com</a>
+      <br><br>
+      <a href="book.html" class="btn" style="margin-top:0.5rem;">Book a Session</a>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-logo">RainbowStar</span>
+    <p style="font-family:var(--font-display); font-size:0.6rem; letter-spacing:0.15em; color:var(--text-muted); margin-bottom:0.5rem;">RainbowStar Inc.</p>
+    <p>rainbowstar.net &nbsp;·&nbsp; <a href="mailto:rainbowstar.inc.creative@gmail.com">rainbowstar.inc.creative@gmail.com</a></p>
+    <p style="margin-top:0.5rem; font-size:0.75rem;">© 2025 RainbowStar Inc. All paintings and photography are RainbowStarOriginals. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
