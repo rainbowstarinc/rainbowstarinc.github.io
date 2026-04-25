@@ -24,7 +24,7 @@
 <body>
 
   <nav>
-    <a class="nav-logo" href="index.html">RainbowStar</a>
+    <a class="nav-logo" href="index.html">RainbowStar<span class="nav-logo-sub">energy artist</span></a>
     <button class="nav-toggle" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -32,6 +32,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="pages/sessions.html">Sessions</a></li>
       <li><a href="pages/oracle.html">Oracle</a></li>
+      <li><a href="pages/circles.html">Circles</a></li>
       <li><a href="pages/art.html">Art</a></li>
       <li><a href="pages/book.html">Book</a></li>
       <li><a href="pages/about.html">About</a></li>
@@ -45,7 +46,8 @@
     <div class="hero-content">
       <span class="hero-eyebrow">Welcome to</span>
       <h1>RainbowStar</h1>
-      <p class="hero-tagline">A space of art, healing, and multidimensional remembrance</p>
+      <p style="font-family:var(--font-body); font-style:italic; font-size:1.1rem; letter-spacing:0.45em; color:#c4aee8; margin-bottom:1rem;">energy arts</p>
+      <p class="hero-tagline">When I surrender, magic can find me.</p>
     </div>
   </section>
 
@@ -53,16 +55,17 @@
   <section class="intro">
     <div class="section-inner">
       <div class="fade-in">
-        <span class="section-label">The Field</span>
-        <h2 class="section-title" style="text-align:center;">Where healing becomes art<br>and art becomes healing</h2>
+        <h2 class="section-title" style="text-align:center;">Being of light, welcome.</h2>
         <div class="divider"></div>
-        <p>
-          RainbowStar is a multidimensional healing and creative field — a living intersection
-          of intuitive bodywork, sound healing, plant spirit medicine, and sacred painting. Each session, each
-          artwork, is an invitation to remember what you already know.
+        <p style="text-align:center;">
+          Thank you for being here. You are divinely guided, and I respect your timing.
         </p>
-        <div style="text-align:center; margin-top: 1rem;">
-          <a href="pages/about.html" class="btn">Meet the Practitioner</a>
+        <p style="text-align:center; font-style:italic; color:var(--text-muted); margin-top:0.5rem;">
+          Feel invited to schedule a session, learn more about my practice, or request an introductory call.
+        </p>
+        <div style="text-align:center; margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="pages/book.html" class="btn btn-solid">Book a Session</a>
+          <a href="mailto:rainbowstar.inc.creative@gmail.com?subject=Introductory Call Request" class="btn">Request an Intro Call</a>
         </div>
       </div>
     </div>
@@ -72,35 +75,37 @@
   <section class="offerings">
     <div class="section-inner">
       <div class="fade-in" style="text-align:center;">
-        <span class="section-label">What We Offer</span>
         <h2 class="section-title" style="text-align:center;">Ways of working together</h2>
         <div class="divider"></div>
       </div>
       <div class="offerings-grid">
         <div class="offering-card fade-in">
-          <span class="offering-icon">🤲</span>
+          <div class="offering-img">
+            <img src="images/photo-crystal-tools.jpeg" alt="Healing Sessions" loading="lazy" />
+          </div>
           <h3>Healing Sessions</h3>
           <p>Touch, sound, crystals, color, and cosmic guidance — woven into a single session tailored to your field.</p>
           <br>
           <a href="pages/sessions.html" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem;">Explore Sessions</a>
         </div>
         <div class="offering-card fade-in">
-          <span class="offering-icon">✦</span>
+          <div class="offering-img">
+            <img src="images/painting-star-compass.jpeg" alt="Oracle" loading="lazy" />
+          </div>
           <h3>Oracle</h3>
           <p>Guidance through symbol, intuition, and the language of the soul. A reading for those at a threshold.</p>
           <br>
           <a href="pages/oracle.html" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem;">Enter the Oracle</a>
         </div>
         <div class="offering-card fade-in">
-          <span class="offering-icon">🎨</span>
+          <div class="offering-img">
+            <img src="images/photo-paint-mixing.jpeg" alt="Sacred Art" loading="lazy" />
+          </div>
           <h3>Sacred Art</h3>
           <p>Original paintings that carry frequency. Pieces for your home, altar, or healing space.</p>
           <br>
           <a href="pages/art.html" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem;">View the Gallery</a>
         </div>
-      </div>
-      <div style="text-align:center; margin-top:2.5rem;">
-        <a href="pages/sessions.html" class="btn">Enter the Temple</a>
       </div>
     </div>
   </section>
@@ -109,7 +114,7 @@
   <section class="art-preview">
     <div class="section-inner">
       <div class="fade-in" style="text-align:center;">
-        <span class="section-label">Original Works</span>
+        <span class="section-label">Original Transmissions</span>
         <h2 class="section-title" style="text-align:center;">From the Studio</h2>
         <div class="divider"></div>
       </div>
@@ -142,27 +147,16 @@
   <!-- QUOTE -->
   <section class="quote-band">
     <blockquote>
-      The more I surrender<br>
-      <span style="display:block; margin-top:0.4em;">the more magic can find me</span>
+      if a miracle is happening,<br>
+      <span style="display:block; margin-top:0.4em;">i'm letting it.</span>
     </blockquote>
   </section>
 
-  <!-- CTA -->
-  <section style="text-align:center; background: var(--navy); padding: 6rem 2rem;">
-    <div class="section-inner fade-in">
-      <span class="section-label">Begin Here</span>
-      <h2 class="section-title" style="text-align:center;">Ready to enter the field?</h2>
-      <div class="divider"></div>
-      <p style="color:var(--white-soft); max-width:500px; margin: 0 auto 2.5rem; font-style:italic;">
-        Sessions are offered with care, intention, and deep presence. Every encounter is unique.
-      </p>
-      <a href="pages/book.html" class="btn btn-solid">Book a Session</a>
-    </div>
-  </section>
-
   <footer>
-    <span class="footer-logo">RainbowStar</span>
-    <p style="font-family:var(--font-display); font-size:0.6rem; letter-spacing:0.15em; color:var(--text-muted); margin-bottom:0.5rem;">RainbowStar Inc.</p>
+    <div style="display:inline-block; text-align:right; margin-bottom:1rem;">
+      <span class="footer-logo" style="display:block;">RainbowStar</span>
+      <p style="font-family:var(--font-body); font-size:0.75rem; letter-spacing:0.3em; color:var(--text-muted); margin-top:-0.35rem; font-style:italic;">incorporated</p>
+    </div>
     <div class="footer-social">
     <a href="https://www.instagram.com/rainbowstarflower/" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>

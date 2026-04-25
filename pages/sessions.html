@@ -11,162 +11,21 @@
   <meta property="og:url" content="https://rainbowstar.net/pages/sessions.html" />
   <meta property="og:title" content="Healing Sessions – RainbowStar | Bodywork, Sound & Plant Spirit Medicine" />
   <meta property="og:description" content="Multidimensional healing sessions in the Pacific Northwest. Touch, sound, crystals, color, cosmic guidance, and plant spirit pathways." />
-  <meta property="og:image" content="https://rainbowstar.net/images/photo-healing-room.jpeg" />
+  <meta property="og:image" content="https://rainbowstar.net/images/painting-heart.jpeg" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Healing Sessions – RainbowStar" />
   <meta name="twitter:description" content="Multidimensional healing sessions in the Pacific Northwest. Touch, sound, crystals, color, cosmic guidance, and plant spirit pathways." />
-  <meta name="twitter:image" content="https://rainbowstar.net/images/photo-healing-room.jpeg" />
+  <meta name="twitter:image" content="https://rainbowstar.net/images/painting-heart.jpeg" />
   <link rel="icon" type="image/png" href="../favicon.png" />
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <link rel="stylesheet" href="../css/style.css" />
-  <style>
-    .session-nav-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 3rem;
-    }
-    .session-nav-card {
-      border: 1px solid rgba(201,168,76,0.2);
-      padding: 1.75rem 1.25rem;
-      background: rgba(255,255,255,0.02);
-      text-align: center;
-      text-decoration: none;
-      transition: all var(--transition);
-      display: block;
-    }
-    .session-nav-card:hover {
-      border-color: rgba(201,168,76,0.6);
-      background: rgba(255,255,255,0.05);
-      transform: translateY(-3px);
-    }
-    .session-nav-card .icon {
-      font-size: 1.75rem;
-      display: block;
-      margin-bottom: 0.75rem;
-    }
-    .session-nav-card h3 {
-      font-family: var(--font-display);
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: 0.5rem;
-    }
-    .session-nav-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-style: italic;
-      line-height: 1.5;
-      margin-bottom: 0.75rem;
-    }
-    .session-nav-card .arrow {
-      font-family: var(--font-display);
-      font-size: 0.55rem;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
-    @media (max-width: 600px) {
-      .session-nav-grid { grid-template-columns: 1fr 1fr; }
-    }
 
-    /* Modality Cards */
-    .modality-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      margin-top: 0.5rem;
-    }
-    .modality-card {
-      border: 1px solid rgba(201,168,76,0.18);
-      background: rgba(255,255,255,0.025);
-      padding: 1.75rem 1.5rem;
-      transition: all var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-    .modality-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity var(--transition);
-    }
-    .modality-card:hover {
-      border-color: rgba(201,168,76,0.45);
-      transform: translateY(-3px);
-    }
-    .modality-card:hover::before { opacity: 1; }
-    .modality-icon {
-      font-size: 1.6rem;
-      display: block;
-      margin-bottom: 1rem;
-    }
-    .modality-name {
-      font-family: var(--font-display);
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: 0.6rem;
-      display: block;
-    }
-    .modality-desc {
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-style: italic;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    /* What to Expect — horizontal steps */
-    .expect-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      margin-top: 0.5rem;
-    }
-    .expect-step {
-      padding: 2rem 2rem 2rem;
-      border-top: 1px solid rgba(201,168,76,0.25);
-      position: relative;
-    }
-    .expect-step + .expect-step {
-      border-left: 1px solid rgba(201,168,76,0.12);
-    }
-    .expect-step-label {
-      font-family: var(--font-display);
-      font-size: 0.55rem;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 0.75rem;
-    }
-    .expect-step p {
-      color: var(--white-soft);
-      font-size: 0.95rem;
-      line-height: 1.8;
-      margin: 0;
-    }
-    @media (max-width: 768px) {
-      .modality-grid { grid-template-columns: repeat(2, 1fr); }
-      .expect-steps { grid-template-columns: 1fr; }
-      .expect-step + .expect-step { border-left: none; border-top: 1px solid rgba(201,168,76,0.12); }
-    }
-    @media (max-width: 480px) {
-      .modality-grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
   <nav>
-    <a class="nav-logo" href="../index.html">RainbowStar</a>
+    <a class="nav-logo" href="../index.html">RainbowStar<span class="nav-logo-sub">energy artist</span></a>
     <button class="nav-toggle" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -174,6 +33,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="sessions.html">Sessions</a></li>
       <li><a href="oracle.html">Oracle</a></li>
+      <li><a href="circles.html">Circles</a></li>
       <li><a href="art.html">Art</a></li>
       <li><a href="book.html">Book</a></li>
       <li><a href="about.html">About</a></li>
@@ -183,119 +43,122 @@
   <!-- HERO -->
   <div style="position:relative; min-height:70vh; display:flex; align-items:flex-end; overflow:hidden;">
     <div style="position:absolute;inset:0;">
-      <img src="../images/photo-healing-room.jpeg" alt="The healing room" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.1) brightness(0.6);" />
+      <img src="../images/painting-heart.jpeg" alt="The healing room" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.1) brightness(0.6);" />
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(10,11,24,0.3) 0%, rgba(10,11,24,0.88) 100%);"></div>
     </div>
-    <div style="position:relative; z-index:2; padding: 4rem 2rem 5rem; max-width:1000px; margin:0 auto; width:100%;">
+    <div style="position:relative; z-index:2; padding: 4rem 2rem 5rem; max-width:1000px; margin:0 auto; width:100%; text-align:center;">
       <span class="section-label">The Temple</span>
       <h1 class="section-title" style="font-size: clamp(2.2rem, 5vw, 4rem);">Healing Sessions</h1>
-      <p style="color:var(--white-soft); font-style:italic; max-width:560px; font-size:1.1rem; line-height:1.8;">
+      <p class="hero-subtitle">
         A multidimensional approach to healing — going to the root of what lives beneath the pattern, and meeting the body, energy field, and soul with presence, care, and ancient intelligence.
       </p>
     </div>
   </div>
 
   <!-- SESSION OVERVIEW -->
-  <section style="background: var(--navy);">
-    <div class="section-inner">
-      <div class="fade-in" style="text-align:center;">
-        <span class="section-label">What's Available</span>
-        <h2 class="section-title" style="text-align:center;">Ways of Working Together</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="session-nav-grid fade-in">
-        <a href="#in-person" class="session-nav-card">
-          <span class="icon">🤲</span>
-          <h3>In-Person Healing</h3>
-          <p>Full-length Reiki session with bodywork, sound, crystals & oracle</p>
-          <span class="arrow">Explore ↓</span>
-        </a>
-        <a href="#oracle" class="session-nav-card">
-          <span class="icon">✦</span>
-          <h3>Oracle Reading</h3>
-          <p>Symbolic guidance through intuition and the language of the soul</p>
-          <span class="arrow">Explore ↓</span>
-        </a>
-        <a href="#distance" class="session-nav-card">
-          <span class="icon">🌐</span>
-          <h3>Distance Healing</h3>
-          <p>Reiki sent across space and time — via Zoom or silent transmission</p>
-          <span class="arrow">Explore ↓</span>
-        </a>
-        <a href="#little-ones" class="session-nav-card">
-          <span class="icon">🌱</span>
-          <h3>Kids, Babies & Animals</h3>
-          <p>Gentle, brief sessions for all beings — in person or by distance</p>
-          <span class="arrow">Explore ↓</span>
-        </a>
-        <a href="plant-medicine.html" class="session-nav-card">
-          <span class="icon">🌿</span>
-          <h3>Plant Medicine Journeys</h3>
-          <p>Sacred cannabis-supported sessions for those who feel called</p>
-          <span class="arrow">Learn More →</span>
-        </a>
-        <a href="#space-clearing" class="session-nav-card">
-          <span class="icon">🏡</span>
-          <h3>Space &amp; Land Clearing</h3>
-          <p>Energetic clearing and harmonization for homes, land, and sacred spaces</p>
-          <span class="arrow">Explore ↓</span>
-        </a>
-      </div>
+  <section style="background: var(--navy); padding: 4rem 2rem 2rem;">
+    <div class="fade-in" style="text-align:center; max-width:1000px; margin:0 auto;">
+      <h2 class="section-title" style="text-align:center;">Offerings</h2>
+      <div class="divider"></div>
     </div>
   </section>
 
-  <!-- MODALITIES -->
-  <section style="background: linear-gradient(to bottom, var(--deep-night), var(--navy));">
-    <div class="section-inner">
-      <div class="fade-in" style="text-align:center; margin-bottom:3rem;">
-        <span class="section-label">The Work</span>
-        <h2 class="section-title" style="text-align:center;">Tools &amp; Modalities</h2>
-        <div class="divider"></div>
-        <p style="color:var(--text-muted); font-style:italic; max-width:560px; margin:0 auto;">
-          Each session is unique and responsive. I work intuitively with whatever wants to be seen, moved, or released — no two sessions are the same.
-        </p>
-      </div>
-      <div class="modality-grid fade-in">
-        <div class="modality-card">
-          <span class="modality-icon">🤲</span>
-          <span class="modality-name">Intuitive Touch &amp; Bodywork</span>
-          <p class="modality-desc">Listening hands that follow the body's own wisdom — reading what words cannot reach.</p>
+  <section style="background: var(--navy); padding: 0 2rem 5rem;">
+    <div class="session-cards-grid" style="max-width:1000px; margin:0 auto;">
+
+      <div class="session-card fade-in">
+        <div class="session-card-image">
+          <img src="../images/photo-moonstone-hand.jpeg" alt="In-Person Healing" loading="lazy" />
         </div>
-        <div class="modality-card">
-          <span class="modality-icon">🔔</span>
-          <span class="modality-name">Toning &amp; Sound Healing</span>
-          <p class="modality-desc">Voice, bowls, and frequency as medicine — sound that moves through and reorganizes.</p>
-        </div>
-        <div class="modality-card">
-          <span class="modality-icon">💎</span>
-          <span class="modality-name">Crystal Allies</span>
-          <p class="modality-desc">Stone allies placed with intention to anchor, amplify, and gently clear the field.</p>
-        </div>
-        <div class="modality-card">
-          <span class="modality-icon">✦</span>
-          <span class="modality-name">Oracle Reading</span>
-          <p class="modality-desc">Symbol and intuition as a language of the soul — included in every full session.</p>
-        </div>
-        <div class="modality-card">
-          <span class="modality-icon">🌀</span>
-          <span class="modality-name">Mayan Abdominal Massage</span>
-          <p class="modality-desc">An ancient technique honoring the sacred center — gentle, grounding, and profound.</p>
-        </div>
-        <div class="modality-card">
-          <span class="modality-icon">🌿</span>
-          <span class="modality-name">Yoga &amp; Movement</span>
-          <p class="modality-desc">Breath and body as pathways into presence — movement as a form of remembrance.</p>
+        <div class="session-card-body">
+          <span class="section-label">In-Person</span>
+          <h3>Reiki &amp; Energy Healing</h3>
+          <p>Touch, sound, crystals, and oracle — woven into a full session tailored to your field.</p>
         </div>
       </div>
+
+      <div class="session-card fade-in">
+        <div class="session-card-image">
+          <img src="../images/painting-star-compass.jpeg" alt="Oracle Reading" loading="lazy" />
+        </div>
+        <div class="session-card-body">
+          <span class="section-label">Oracle</span>
+          <h3>Oracle Reading</h3>
+          <p>Symbolic guidance through intuition and the language of the soul.</p>
+        </div>
+      </div>
+
+      <div class="session-card fade-in">
+        <div class="session-card-image">
+          <img src="../images/painting-cosmos.jpeg" alt="Distance Healing" loading="lazy" />
+        </div>
+        <div class="session-card-body">
+          <span class="section-label">At a Distance</span>
+          <h3>Distance Healing</h3>
+          <p>Reiki sent across space and time — as potent as in person.</p>
+        </div>
+      </div>
+
+      <div class="session-card fade-in">
+        <div class="session-card-image">
+          <img src="../images/painting-flower-burst.jpeg" alt="Kids, Babies and Animals" loading="lazy" />
+        </div>
+        <div class="session-card-body">
+          <span class="section-label">All Beings Welcome</span>
+          <h3>Kids, Babies &amp; Animals</h3>
+          <p>Gentle sessions for the little ones and creatures — in person or by distance.</p>
+        </div>
+      </div>
+
+      <div class="session-card fade-in">
+        <div class="session-card-image">
+          <img src="../images/painting-forest.jpeg" alt="Plant Medicine Journeys" loading="lazy" />
+        </div>
+        <div class="session-card-body">
+          <span class="section-label">Plant Spirit</span>
+          <h3>Plant Medicine Journeys</h3>
+          <p>Sacred cannabis-supported sessions for those who feel called.</p>
+        </div>
+      </div>
+
+      <div class="session-card fade-in">
+        <div class="session-card-image">
+          <img src="../images/painting-blue-flow.jpeg" alt="Space and Land Clearing" loading="lazy" />
+        </div>
+        <div class="session-card-body">
+          <span class="section-label">For Your Space</span>
+          <h3>Space &amp; Land Clearing</h3>
+          <p>Energetic harmonization for homes, land, and sacred spaces.</p>
+        </div>
+      </div>
+
     </div>
+  </section>
+
+  <!-- QUOTE + ARRIVING + ACCESSIBILITY + CTA — shared magnolia journey -->
+  <div style="position:relative; overflow:hidden; background: var(--deep-night);">
+
+    <!-- Bud: blooms from center of Arriving section -->
+    <div style="position:absolute; top:0; left:0; right:0; height:55%; background: url('../images/photo-magnolia-bud.jpeg') center 40% / cover no-repeat; opacity:0.13; pointer-events:none;"></div>
+    <div style="position:absolute; top:0; left:0; right:0; height:55%; background: radial-gradient(ellipse 70% 50% at 50% 50%, transparent 25%, var(--deep-night) 75%); pointer-events:none;"></div>
+    <!-- Soft fade at bud bottom edge -->
+    <div style="position:absolute; top:0; left:0; right:0; height:55%; background: linear-gradient(to bottom, transparent 60%, var(--deep-night) 100%); pointer-events:none;"></div>
+
+    <!-- Full bloom: rises from Begin section -->
+    <div style="position:absolute; bottom:0; left:0; right:0; height:55%; background: url('../images/photo-magnolia-bloom.jpeg') center 60% / cover no-repeat; opacity:0.18; pointer-events:none;"></div>
+    <div style="position:absolute; bottom:0; left:0; right:0; height:55%; background: radial-gradient(ellipse 80% 60% at 50% 80%, transparent 20%, var(--deep-night) 70%); pointer-events:none;"></div>
+
+  <!-- QUOTE -->
+  <section class="quote-band" style="background:transparent; position:relative; z-index:2;">
+    <blockquote>slowing down gives me more time.</blockquote>
   </section>
 
   <!-- WHAT TO EXPECT -->
-  <section style="background: var(--navy);">
+  <section style="background:transparent; position:relative; z-index:2;">
     <div class="section-inner">
       <div class="fade-in" style="text-align:center; margin-bottom:3rem;">
-        <span class="section-label">Arriving</span>
-        <h2 class="section-title" style="text-align:center;">What to Expect</h2>
+        <span class="section-label">what to expect</span>
+        <h2 class="section-title" style="text-align:center;">Arriving</h2>
         <div class="divider"></div>
       </div>
       <div class="expect-steps fade-in">
@@ -315,197 +178,21 @@
     </div>
   </section>
 
-  <!-- IN-PERSON HEALING -->
-  <section id="in-person" style="background: var(--deep-night); scroll-margin-top: 80px;">
-    <div class="section-inner">
-      <div class="fade-in" style="text-align:center; margin-bottom:3rem;">
-        <span class="section-label">In-Person</span>
-        <h2 class="section-title" style="text-align:center;">Reiki Energy Healing</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="two-col fade-in" style="gap:4rem; align-items:center;">
-        <div>
-          <p style="color:var(--white-soft); margin-bottom:1.2rem;">
-            During a Reiki session you will experience deep relaxation which supports the nervous system, provides a healing reset, and boosts your immune system response to promote healing. We work toward the root — addressing what lives beneath the symptom, not just the surface pattern.
-          </p>
-          <p style="color:var(--white-soft); margin-bottom:1.2rem;">
-            You may wish to focus on any aspect that needs attention — physical, emotional, mental, and/or spiritual. Sessions are integrative and include support for your body and organs as well as your energy field, aura healing, and chakra balancing.
-          </p>
-          <p style="color:var(--white-soft); margin-bottom:1.5rem;">
-            Research shows that Reiki helps reduce stress and anxiety and improves overall well-being. Many clients notice effects continuing to unfold for days after a session.
-          </p>
-          <div style="border:1px solid rgba(201,168,76,0.15); padding:1.25rem 1.5rem; background:rgba(255,255,255,0.02); margin-bottom:1rem;">
-            <p style="font-family:var(--font-display); font-size:0.58rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.25rem;">IN-PERSON · 90 MINUTES</p>
-            <p style="color:var(--white-soft); font-size:0.9rem; font-style:italic;">Includes oracle reading, sound, crystals, color &amp; light</p>
-          </div>
-          <div style="border:1px solid rgba(201,168,76,0.15); padding:1.25rem 1.5rem; background:rgba(255,255,255,0.02);">
-            <p style="font-family:var(--font-display); font-size:0.58rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.25rem;">PLANT SPIRIT MEDICINE</p>
-            <p style="color:var(--white-soft); font-size:0.9rem; font-style:italic;">Plant spirit pathways woven in for those who feel called — always optional</p>
-          </div>
-        </div>
-        <div>
-          <img src="../images/photo-crystal-tools.jpeg" alt="Crystal healing tools" style="width:100%; border:1px solid rgba(201,168,76,0.15);" loading="lazy" />
-          <div style="margin-top:1.5rem; text-align:center;">
-            <a href="book.html" class="btn btn-solid">Book a Session</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ORACLE READING -->
-  <section id="oracle" style="background: var(--navy); scroll-margin-top: 80px;">
-    <div class="section-inner">
-      <div class="two-col fade-in" style="gap:4rem; align-items:center;">
-        <div style="text-align:center;">
-          <div class="oracle-circle" style="width:240px; height:240px; margin: 0 auto;">
-            <img src="../images/painting-seed.jpeg" alt="Oracle — The Seed painting" loading="lazy" />
-          </div>
-        </div>
-        <div>
-          <span class="section-label">Oracle</span>
-          <h2 class="section-title">Oracle Readings</h2>
-          <p style="color:var(--white-soft); margin-bottom:1.2rem;">
-            A simple oracle reading is included in every full-length Reiki session. The reading emerges from the body and the field — alive, specific, and woven into the work.
-          </p>
-          <p style="color:var(--white-soft); margin-bottom:1.5rem;">
-            Standalone oracle readings are also available for those at a threshold — a moment of transition, decision, or simply the need to hear your own knowing more clearly.
-          </p>
-          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-            <a href="oracle.html" class="btn">About Oracle Readings</a>
-            <a href="book.html" class="btn btn-solid">Book a Reading</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DISTANCE HEALING -->
-  <section id="distance" style="background: var(--cosmic); scroll-margin-top: 80px;">
-    <div class="section-inner">
-      <div class="fade-in" style="text-align:center; margin-bottom:3rem;">
-        <span class="section-label">Beyond the Room</span>
-        <h2 class="section-title" style="text-align:center;">Distance Healing</h2>
-        <div class="divider"></div>
-        <p style="color:var(--white-soft); font-style:italic; max-width:560px; margin: 0 auto;">
-          Healing doesn't require physical proximity. Energy moves across space and time — and a distance session can be just as potent as one in person.
+    <section style="text-align:center; padding: 6rem 2rem; position:relative; z-index:2;">
+      <div class="section-inner fade-in">
+        <p style="color:var(--white-soft); max-width:480px; margin: 0 auto 2rem; font-style:italic;">
+          Sessions are offered with care, intention, and deep presence.
         </p>
+        <a href="book.html" class="btn btn-solid">Begin — Book a Session</a>
       </div>
-      <div class="offerings-grid fade-in">
-        <div class="offering-card">
-          <span class="offering-icon">📹</span>
-          <h3>Zoom + Distance Reiki</h3>
-          <p>We begin with a Zoom call to connect and set intention. I then send Reiki by distance while you rest in your own space.</p>
-          <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.75rem;">45–60 minutes</p>
-        </div>
-        <div class="offering-card">
-          <span class="offering-icon">✉️</span>
-          <h3>Silent Distance Reiki</h3>
-          <p>Send a brief description of what you'd like Reiki for by text or email. I hold your field at a scheduled time while you rest — no call required.</p>
-          <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.75rem;">15–30 minutes</p>
-        </div>
-        <div class="offering-card">
-          <span class="offering-icon">🌀</span>
-          <h3>Distance Package</h3>
-          <p>A series of sessions held over time — ideal for ongoing support, deep integration, or those who can't access in-person work.</p>
-          <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.75rem;">Reach out to discuss</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KIDS, BABIES & ANIMALS -->
-  <section id="little-ones" style="background: var(--deep-night); scroll-margin-top: 80px;">
-    <div class="section-inner">
-      <div class="two-col fade-in" style="gap:4rem; align-items:center;">
-        <div>
-          <span class="section-label">All Beings Welcome</span>
-          <h2 class="section-title">Kids, Babies &amp; Animals</h2>
-          <p style="color:var(--white-soft); margin-bottom:1.2rem;">
-            Healing belongs to all beings. I offer gentle, brief distance sessions for children, babies, animals, and plants — sent with care and full presence.
-          </p>
-          <p style="color:var(--white-soft); margin-bottom:1.5rem;">
-            These sessions are typically shorter and can be requested by text or email. In-person sessions for little ones are available upon request.
-          </p>
-          <a href="book.html" class="btn">Get in Touch</a>
-        </div>
-        <div style="text-align:center;">
-          <div class="oracle-circle" style="width:240px; height:240px; margin: 0 auto;">
-            <img src="../images/painting-flower-burst.jpeg" alt="Genesis — healing for all beings" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SPACE & LAND CLEARING -->
-  <section id="space-clearing" style="background: var(--cosmic); scroll-margin-top: 80px;">
-    <div class="section-inner">
-      <div class="two-col fade-in" style="gap:4rem; align-items:center;">
-        <div style="text-align:center;">
-          <div class="oracle-circle" style="width:240px; height:240px; margin: 0 auto;">
-            <img src="../images/painting-blue-flow.jpeg" alt="Space clearing — blue flow painting" loading="lazy" />
-          </div>
-        </div>
-        <div>
-          <span class="section-label">For Your Space</span>
-          <h2 class="section-title">Space &amp; Land Clearing</h2>
-          <p style="color:var(--white-soft); margin-bottom:1.2rem;">
-            The spaces we inhabit hold energy — the residue of what has happened there, the emotions that have moved through, the stories embedded in the land. A clearing session works with the root of what is present in a space, releasing stagnant or dissonant energy and restoring flow and harmony.
-          </p>
-          <p style="color:var(--white-soft); margin-bottom:1.5rem;">
-            Available for homes, land, altars, and sacred spaces — in person in the Pacific Northwest, or by distance anywhere. Whether you've moved into a new space, navigated a difficult transition, or simply feel the need for a reset, this work can shift the feeling of a place profoundly.
-          </p>
-          <div style="border:1px solid rgba(201,168,76,0.15); padding:1.25rem 1.5rem; background:rgba(255,255,255,0.02); margin-bottom:1.5rem;">
-            <p style="font-family:var(--font-display); font-size:0.58rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.25rem;">IN PERSON OR BY DISTANCE</p>
-            <p style="color:var(--white-soft); font-size:0.9rem; font-style:italic;">Reach out to discuss your space and what feels needed</p>
-          </div>
-          <a href="book.html" class="btn">Get in Touch</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACCESSIBILITY + PAY IT FORWARD -->
-  <section style="background: var(--navy);">
-    <div class="section-inner">
-      <div class="fade-in" style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
-        <div style="padding:2.5rem; border:1px solid rgba(201,168,76,0.15); background:rgba(255,255,255,0.02); text-align:center;">
-          <span class="section-label">Accessibility</span>
-          <p style="font-family:var(--font-display); font-size:0.75rem; letter-spacing:0.1em; color:var(--gold-light); margin-bottom:1rem;">Sliding scale available for BIPOC &amp; LGBTQ+ folx</p>
-          <p style="color:var(--white-soft); font-style:italic; max-width:360px; margin: 0 auto 1.5rem;">
-            Healing should be accessible. Please reach out if pricing is a barrier — I will always do my best to find a way.
-          </p>
-          <a href="book.html" class="btn">Get in Touch</a>
-        </div>
-        <div style="padding:2.5rem; border:1px solid rgba(201,168,76,0.15); background:rgba(255,255,255,0.02); text-align:center;">
-          <span class="section-label">Pay It Forward</span>
-          <p style="font-family:var(--font-display); font-size:0.75rem; letter-spacing:0.1em; color:var(--gold-light); margin-bottom:1rem;">Support those in need</p>
-          <p style="color:var(--white-soft); font-style:italic; max-width:360px; margin: 0 auto 1.5rem;">
-            All donations support those who are unable to afford services. The ripple effect of this gift is felt for generations — multiplying infinitely in reciprocity.
-          </p>
-          <a href="mailto:rainbowstar.inc.creative@gmail.com" class="btn">Donate</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section style="background: var(--deep-night); text-align:center;">
-    <div class="section-inner fade-in">
-      <span class="section-label">Begin</span>
-      <h2 class="section-title" style="text-align:center;">Ready to work together?</h2>
-      <div class="divider"></div>
-      <p style="color:var(--white-soft); max-width:480px; margin: 0 auto 2.5rem; font-style:italic;">
-        Sessions are offered with full presence and deep care. I look forward to meeting you in the field.
-      </p>
-      <a href="book.html" class="btn btn-solid">Book a Session</a>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <footer>
-    <span class="footer-logo">RainbowStar</span>
-    <p style="font-family:var(--font-display); font-size:0.6rem; letter-spacing:0.15em; color:var(--text-muted); margin-bottom:0.5rem;">RainbowStar Inc.</p>
+    <div style="display:inline-block; text-align:right; margin-bottom:1rem;">
+      <span class="footer-logo" style="display:block;">RainbowStar</span>
+      <p style="font-family:var(--font-body); font-size:0.75rem; letter-spacing:0.3em; color:var(--text-muted); margin-top:-0.35rem; font-style:italic;">incorporated</p>
+    </div>
     <div class="footer-social">
     <a href="https://www.instagram.com/rainbowstarflower/" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>

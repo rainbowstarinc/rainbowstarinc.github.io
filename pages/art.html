@@ -20,119 +20,12 @@
   <link rel="icon" type="image/png" href="../favicon.png" />
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <link rel="stylesheet" href="../css/style.css" />
-  <style>
-    .gallery-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-      margin: 2rem 0 3rem;
-    }
-    .filter-btn {
-      font-family: var(--font-display);
-      font-size: 0.58rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 0.5rem 1.2rem;
-      border: 1px solid rgba(201,168,76,0.25);
-      color: var(--text-muted);
-      background: none;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .filter-btn:hover, .filter-btn.active {
-      border-color: var(--gold);
-      color: var(--gold-light);
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      background: var(--cosmic);
-      border: 1px solid rgba(201,168,76,0.08);
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .gallery-item:hover {
-      border-color: rgba(201,168,76,0.3);
-      transform: translateY(-3px);
-    }
-    .gallery-item img {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s ease, filter 0.4s ease;
-      filter: saturate(0.9);
-    }
-    .gallery-item:hover img { transform: scale(1.05); filter: saturate(1.15); }
-    .gallery-caption {
-      padding: 0.9rem 1.1rem;
-      background: rgba(10,11,24,0.97);
-      border-top: 1px solid rgba(201,168,76,0.08);
-    }
-    .gallery-caption h3 {
-      font-family: var(--font-display);
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: 0.2rem;
-    }
-    .gallery-caption p { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
 
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(5,6,15,0.97);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .lightbox.open { display: flex; }
-    .lightbox img {
-      max-width: 88vw;
-      max-height: 78vh;
-      object-fit: contain;
-      border: 1px solid rgba(201,168,76,0.15);
-      box-shadow: 0 0 80px rgba(0,0,0,0.8);
-    }
-    .lightbox-controls { display: flex; align-items: center; gap: 2rem; }
-    .lightbox-btn {
-      font-family: var(--font-display);
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      color: var(--white-soft);
-      cursor: pointer;
-      background: none;
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 0.5rem 1.2rem;
-      transition: all 0.3s;
-    }
-    .lightbox-btn:hover { border-color: var(--gold); color: var(--gold-light); }
-    .lightbox-title {
-      font-family: var(--font-display);
-      font-size: 0.65rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      min-width: 200px;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
 
   <nav>
-    <a class="nav-logo" href="../index.html">RainbowStar</a>
+    <a class="nav-logo" href="../index.html">RainbowStar<span class="nav-logo-sub">energy artist</span></a>
     <button class="nav-toggle" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -140,6 +33,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="sessions.html">Sessions</a></li>
       <li><a href="oracle.html">Oracle</a></li>
+      <li><a href="circles.html">Circles</a></li>
       <li><a href="art.html">Art</a></li>
       <li><a href="book.html">Book</a></li>
       <li><a href="about.html">About</a></li>
@@ -151,10 +45,10 @@
       <img src="../images/painting-swirl-petals.jpeg" alt="Swirl of Life — acrylic painting by RainbowStar" style="width:100%;height:100%;object-fit:cover;opacity:0.28;filter:saturate(1.2);" />
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(10,11,24,0.4), rgba(10,11,24,0.92));"></div>
     </div>
-    <div style="position:relative; z-index:2; padding: 8rem 2rem 4rem; max-width:1200px; margin:0 auto; width:100%;">
+    <div style="position:relative; z-index:2; padding: 8rem 2rem 4rem; max-width:1200px; margin:0 auto; width:100%; text-align:center;">
       <span class="section-label">Original Works</span>
       <h1 class="section-title" style="font-size: clamp(2.2rem, 5vw, 4rem);">The Gallery</h1>
-      <p style="color:var(--white-soft); font-style:italic; max-width:540px; font-size:1.1rem;">
+      <p class="hero-subtitle">
         28 original paintings — transmissions of frequency held in pigment and canvas.
       </p>
     </div>
@@ -320,8 +214,10 @@
   </div>
 
   <footer>
-    <span class="footer-logo">RainbowStar</span>
-    <p style="font-family:var(--font-display); font-size:0.6rem; letter-spacing:0.15em; color:var(--text-muted); margin-bottom:0.5rem;">RainbowStar Inc.</p>
+    <div style="display:inline-block; text-align:right; margin-bottom:1rem;">
+      <span class="footer-logo" style="display:block;">RainbowStar</span>
+      <p style="font-family:var(--font-body); font-size:0.75rem; letter-spacing:0.3em; color:var(--text-muted); margin-top:-0.35rem; font-style:italic;">incorporated</p>
+    </div>
     <div class="footer-social">
     <a href="https://www.instagram.com/rainbowstarflower/" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
