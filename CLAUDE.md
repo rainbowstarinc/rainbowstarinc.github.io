@@ -34,9 +34,12 @@ Always invoke the `frontend-design` skill for any UI/frontend changes before imp
 
 ### Typography
 - **Display / headings:** `Cinzel` (serif, uppercase, wide letter-spacing)
-- **Body / italic text:** `Cormorant Garamond` (serif, light weight 300, line-height 1.75)
+- **Body text:** `Josefin Sans` (sans-serif, weight 300) — `--font-body`
+- **Hero subtitles & "energy artist" tagline:** `Cormorant Garamond` (serif, weight 300) — `--font-serif`
+- Hero subtitles use `.hero-subtitle` class — Cormorant Garamond, not italic
 - Section labels: 0.6rem, letter-spacing 0.4em, uppercase, gold
 - Nav links: 0.7rem, letter-spacing 0.2em, uppercase
+- Nav logo sub-label ("energy artist"): `.nav-logo-sub` class, 0.9rem, Cormorant Garamond italic
 
 ### Visual Aesthetic
 - Watercolor + cosmic/starfield textures
@@ -69,15 +72,24 @@ Always invoke the `frontend-design` skill for any UI/frontend changes before imp
 ```
 index.html          — Home (hero with hero-painting.jpeg)
 pages/
-  sessions.html     — Temple / booking (lake + mountains banner)
-  oracle.html       — Symbolic/mystical (circular artwork header)
-  art.html          — Gallery (booth photo header, painting grid)
+  sessions.html     — Temple / booking (painting-heart.jpeg banner)
+  oracle.html       — Symbolic/mystical (circular photo-rainbow-rose.jpeg header)
+  circles.html      — Circle offerings (Sacred Relating, 7-week in-person, Portland OR)
+  art.html          — Gallery (painting-swirl-petals.jpeg banner, filterable grid + lightbox)
   book.html         — Booking
   about.html        — Practitioner bio
-css/style.css
+css/style.css       — All styles live here (no embedded <style> blocks in HTML files)
 js/main.js
-images/             — 60+ original paintings and photos (JPEG)
+images/             — 80+ original paintings and photos (JPEG)
 ```
+
+## CSS Architecture (as of April 2026)
+All styles are in `css/style.css` — no embedded `<style>` blocks in HTML files. Page-specific classes are organized by section at the bottom of the file:
+- Sessions: `.session-cards-grid`, `.session-card`, `.modality-grid`, `.modality-card`, `.expect-steps`
+- Circles: `.circle-hero-image`, `.week-arc`, `.details-grid`, `.practice-list`, `.pull-quote`, `.investment-block`, `.form-field`, `.form-input`, `.form-textarea`
+- Art gallery: `.gallery-filters`, `.filter-btn`, `.gallery-grid`, `.gallery-item`, `.gallery-caption`, `.lightbox`
+- About: `.photo-grid`
+- Shared utilities: `.hero-subtitle`, `.hero-tagline`, `.section-label`, `.section-title`, `.divider`, `.two-col`, `.fade-in`
 
 ## Rules
 - Never add light/white backgrounds or break the dark cosmic theme
@@ -86,3 +98,4 @@ images/             — 60+ original paintings and photos (JPEG)
 - Preserve all `loading="lazy"` attributes on images
 - Mobile nav uses `.nav-toggle` hamburger + `.nav-links.open` class (handled in `main.js`)
 - Copyright: "© RainbowStar Inc. All paintings and photography are RainbowStarOriginals."
+- Do not use git worktrees — work directly on the main branch
