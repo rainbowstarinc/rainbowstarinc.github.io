@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homebody — A Gathering Series</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1a1208;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 48px 20px;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    /* ── FLYER SHELL ── */
+    .flyer {
+      width: 620px;
+      background: #16110a;
+      position: relative;
+      /* Outer border frame */
+      box-shadow:
+        inset 0 0 0 1px rgba(200, 150, 60, 0.22),
+        inset 0 0 0 5px rgba(22, 17, 10, 1),
+        inset 0 0 0 6px rgba(200, 150, 60, 0.1),
+        0 20px 60px rgba(0,0,0,0.6);
+    }
+
+    /* Warm ambient fire glow */
+    .flyer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 38%, rgba(180, 80, 20, 0.22) 0%, transparent 52%),
+        radial-gradient(ellipse at 15% 95%, rgba(160, 90, 15, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 5%,  rgba(140, 80, 10, 0.14) 0%, transparent 45%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 10px;
+    }
+
+    /* inner content padding (inside the border) */
+    .inner {
+      padding: 0;
+    }
+
+    /* ── TOP ── */
+    .top {
+      padding: 44px 48px 28px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.5rem;
+      letter-spacing: 0.5em;
+      color: rgba(210, 155, 55, 0.55);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .title {
+      font-family: 'Cinzel', serif;
+      font-size: 5.2rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: #e0b050;
+      line-height: 1;
+      margin-bottom: 10px;
+      text-shadow: 0 0 60px rgba(200, 130, 30, 0.4);
+    }
+
+    .subtitle-theme {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(210, 155, 55, 0.65);
+      letter-spacing: 0.22em;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(245, 228, 200, 0.55);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── MEDALLION ── */
+    .medallion-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 0 28px;
+      position: relative;
+    }
+
+    /* warm glow behind circle */
+    .medallion-wrap::before {
+      content: '';
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(180, 80, 20, 0.28) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .medallion {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      /* Double gold ring */
+      box-shadow:
+        0 0 0 2px rgba(210, 155, 55, 0.9),
+        0 0 0 5px rgba(22, 17, 10, 1),
+        0 0 0 6px rgba(210, 155, 55, 0.35),
+        0 0 30px rgba(200, 110, 20, 0.35),
+        0 0 60px rgba(180, 80, 10, 0.18);
+    }
+
+    .medallion img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: saturate(1.1) brightness(0.92);
+    }
+
+    /* small decorative dots around medallion */
+    .medallion-dots {
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      border: 1px dashed rgba(210, 155, 55, 0.14);
+      pointer-events: none;
+    }
+
+    /* ── HORIZONTAL RULE ── */
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 52px;
+      margin-bottom: 24px;
+    }
+    .ornament-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(210, 155, 55, 0.35));
+    }
+    .ornament-line.rev {
+      background: linear-gradient(to left, transparent, rgba(210, 155, 55, 0.35));
+    }
+    .ornament-diamond {
+      width: 5px;
+      height: 5px;
+      background: rgba(210, 155, 55, 0.6);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ── BODY ── */
+    .body {
+      padding: 0 52px 28px;
+      text-align: center;
+    }
+
+    .descriptor {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      color: rgba(210, 155, 55, 0.75);
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .description {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.06rem;
+      font-weight: 300;
+      color: rgba(245, 228, 200, 0.76);
+      line-height: 1.9;
+      margin-bottom: 26px;
+    }
+
+    /* ── DETAILS BOX ── */
+    .details {
+      border: 1px solid rgba(210, 155, 55, 0.35);
+      background: rgba(210, 155, 55, 0.07);
+      padding: 20px 26px;
+      margin-bottom: 22px;
+      text-align: left;
+    }
+
+    .detail-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 9px;
+    }
+    .detail-row:last-child { margin-bottom: 0; }
+
+    .detail-key {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 400;
+      font-size: 0.52rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(210, 155, 55, 0.9);
+      min-width: 82px;
+      flex-shrink: 0;
+    }
+
+    .detail-val {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(245, 228, 200, 0.88);
+    }
+
+    /* ── TAGS ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+
+    .tag {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.48rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(245, 228, 200, 0.38);
+      border: 1px solid rgba(210, 155, 55, 0.18);
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      padding: 18px 48px 38px;
+      text-align: center;
+      border-top: 1px solid rgba(210, 155, 55, 0.1);
+      position: relative;
+    }
+
+    /* small corner marks */
+    .footer::before, .footer::after {
+      content: '✦';
+      position: absolute;
+      top: -8px;
+      font-size: 8px;
+      color: rgba(210, 155, 55, 0.35);
+      background: #16110a;
+      padding: 0 4px;
+    }
+    .footer::before { left: 52px; }
+    .footer::after  { right: 52px; }
+
+    .url {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.58rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(210, 155, 55, 0.5);
+      margin-bottom: 8px;
+    }
+
+    .closing-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: rgba(245, 228, 200, 0.22);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer">
+    <div class="content">
+      <div class="inner">
+
+        <div class="top">
+          <div class="eyebrow">a music &amp; movement collaboration series · portland, or</div>
+          <div class="title">Homebody</div>
+          <div class="subtitle-theme">arrive</div>
+          <div class="tagline">where the music lives</div>
+        </div>
+
+        <div class="medallion-wrap">
+          <div class="medallion-dots"></div>
+          <div class="medallion">
+            <img src="images/painting-flame-mandala.jpeg" alt="flame mandala — warmth, aliveness, gathering in circle">
+          </div>
+        </div>
+
+        <div class="ornament">
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line rev"></div>
+        </div>
+
+        <div class="body">
+
+          <div class="descriptor">live music &nbsp;·&nbsp; free movement &nbsp;·&nbsp; portland, or</div>
+
+          <p class="description">
+            A nervous-system friendly gathering for bodies in motion.<br>
+            Live acoustic music — unamplified or close to it.<br>
+            Movers who play, musicians who move.<br>
+            No steps to learn. No cool points required.<br>
+            Rest is always a full contribution.
+          </p>
+
+          <div class="details">
+            <div class="detail-row">
+              <span class="detail-key">When</span>
+              <span class="detail-val">Thursday evenings &nbsp;·&nbsp; Summer 2026</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Where</span>
+              <span class="detail-val">Indoor & Outdoor Locations in Portland, OR</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Investment</span>
+              <span class="detail-val">Sliding Scale $15–30 &nbsp;·&nbsp; Scholarship Tickets Available</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Vibe</span>
+              <span class="detail-val">Alcohol-Free &nbsp;·&nbsp; Plant Medicines Welcome &nbsp;·&nbsp; Consent Culture</span>
+            </div>
+          </div>
+
+          <div class="tags">
+            <div class="tag">nervous system friendly</div>
+            <div class="tag">live acoustic music</div>
+            <div class="tag">minimal amplification</div>
+            <div class="tag">alcohol-free</div>
+            <div class="tag">plant medicines welcome</div>
+            <div class="tag">trauma-informed</div>
+            <div class="tag">go at your own pace</div>
+            <div class="tag">floor work welcome</div>
+            <div class="tag">5 rhythms inspired</div>
+            <div class="tag">contact improv</div>
+          </div>
+
+        </div>
+
+        <div class="footer">
+          <div class="url">rainbowstar.net/homebody</div>
+          <div class="closing-note">earnestly weird &nbsp;·&nbsp; wholesome &nbsp;·&nbsp; good company</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

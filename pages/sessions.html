@@ -11,12 +11,12 @@
   <meta property="og:url" content="https://rainbowstar.net/pages/sessions.html" />
   <meta property="og:title" content="Healing Sessions – RainbowStar | Bodywork, Sound & Plant Spirit Medicine" />
   <meta property="og:description" content="Multidimensional healing sessions in the Pacific Northwest. Touch, sound, crystals, color, cosmic guidance, and plant spirit pathways." />
-  <meta property="og:image" content="https://rainbowstar.net/images/painting-heart.jpeg" />
+  <meta property="og:image" content="https://rainbowstar.net/images/painting-star-compass.jpeg" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Healing Sessions – RainbowStar" />
   <meta name="twitter:description" content="Multidimensional healing sessions in the Pacific Northwest. Touch, sound, crystals, color, cosmic guidance, and plant spirit pathways." />
-  <meta name="twitter:image" content="https://rainbowstar.net/images/painting-heart.jpeg" />
+  <meta name="twitter:image" content="https://rainbowstar.net/images/painting-star-compass.jpeg" />
   <link rel="icon" type="image/png" href="../favicon.png" />
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <link rel="stylesheet" href="../css/style.css" />
@@ -34,6 +34,7 @@
       <li><a href="sessions.html">Sessions</a></li>
       <li><a href="oracle.html">Oracle</a></li>
       <li><a href="circles.html">Circles</a></li>
+      <li><a href="homebody.html">Homebody</a></li>
       <li><a href="art.html">Art</a></li>
       <li><a href="book.html">Book</a></li>
       <li><a href="about.html">About</a></li>
@@ -55,84 +56,147 @@
     </div>
   </div>
 
-  <!-- SESSION OVERVIEW -->
-  <section style="background: var(--navy); padding: 4rem 2rem 2rem;">
-    <div class="fade-in" style="text-align:center; max-width:1000px; margin:0 auto;">
-      <h2 class="section-title" style="text-align:center;">Offerings</h2>
-      <div class="divider"></div>
-    </div>
-  </section>
+  <!-- ORACLE CARD DRAW — Offerings -->
+  <section class="oracle-draw-section">
+    <div class="section-inner">
 
-  <section style="background: var(--navy); padding: 0 2rem 5rem;">
-    <div class="session-cards-grid" style="max-width:1000px; margin:0 auto;">
-
-      <div class="session-card fade-in">
-        <div class="session-card-image">
-          <img src="../images/photo-moonstone-hand.jpeg" alt="In-Person Healing" loading="lazy" />
-        </div>
-        <div class="session-card-body">
-          <span class="section-label">In-Person</span>
-          <h3>Reiki &amp; Energy Healing</h3>
-          <p>Touch, sound, crystals, and oracle — woven into a full session tailored to your field.</p>
-        </div>
+      <div class="oracle-draw-header fade-in">
+        <span class="section-label">The Draw</span>
+        <h2 class="section-title" style="text-align:center;">What is your spirit asking for?</h2>
+        <div class="divider"></div>
+        <p class="oracle-draw-intro">Close your eyes. Take a breath. Then choose a card.</p>
+        <button class="btn oracle-action-btn" id="oracle-shuffle">Shuffle the Deck</button>
       </div>
 
-      <div class="session-card fade-in">
-        <div class="session-card-image">
-          <img src="../images/painting-star-compass.jpeg" alt="Oracle Reading" loading="lazy" />
+      <div class="oracle-grid" id="oracle-grid">
+
+        <div class="oracle-card">
+          <div class="oracle-card-inner">
+            <div class="oracle-face-down">
+              <div class="ofd-bg" style="background-image:url('../images/painting-star-back.jpeg')"></div>
+              <div class="ofd-glow"></div>
+              <div class="ofd-border"></div>
+            </div>
+            <div class="oracle-face-up">
+              <div class="session-card-image">
+                <img src="../images/photo-moonstone-hand.jpeg" alt="In-Person Healing" loading="lazy" />
+              </div>
+              <div class="session-card-body">
+                <span class="section-label">In-Person</span>
+                <h3>Reiki &amp; Energy Healing</h3>
+                <p>Touch, sound, crystals, and oracle — woven into a full session tailored to your field.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="session-card-body">
-          <span class="section-label">Oracle</span>
-          <h3>Oracle Reading</h3>
-          <p>Symbolic guidance through intuition and the language of the soul.</p>
+
+        <div class="oracle-card">
+          <div class="oracle-card-inner">
+            <div class="oracle-face-down">
+              <div class="ofd-bg" style="background-image:url('../images/painting-star-back.jpeg')"></div>
+              <div class="ofd-glow"></div>
+              <div class="ofd-border"></div>
+            </div>
+            <div class="oracle-face-up">
+              <div class="session-card-image">
+                <img src="../images/painting-star-compass.jpeg" alt="Oracle Reading" loading="lazy" />
+              </div>
+              <div class="session-card-body">
+                <span class="section-label">Oracle</span>
+                <h3>Oracle Reading</h3>
+                <p>Symbolic guidance through intuition and the language of the soul.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="oracle-card">
+          <div class="oracle-card-inner">
+            <div class="oracle-face-down">
+              <div class="ofd-bg" style="background-image:url('../images/painting-star-back.jpeg')"></div>
+              <div class="ofd-glow"></div>
+              <div class="ofd-border"></div>
+            </div>
+            <div class="oracle-face-up">
+              <div class="session-card-image">
+                <img src="../images/painting-cosmos.jpeg" alt="Distance Healing" loading="lazy" />
+              </div>
+              <div class="session-card-body">
+                <span class="section-label">At a Distance</span>
+                <h3>Distance Healing</h3>
+                <p>Reiki sent across space and time — as potent as in person.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="oracle-card">
+          <div class="oracle-card-inner">
+            <div class="oracle-face-down">
+              <div class="ofd-bg" style="background-image:url('../images/painting-star-back.jpeg')"></div>
+              <div class="ofd-glow"></div>
+              <div class="ofd-border"></div>
+            </div>
+            <div class="oracle-face-up">
+              <div class="session-card-image">
+                <img src="../images/painting-flower-burst.jpeg" alt="Kids, Babies and Animals" loading="lazy" />
+              </div>
+              <div class="session-card-body">
+                <span class="section-label">All Beings Welcome</span>
+                <h3>Kids, Babies &amp; Animals</h3>
+                <p>Gentle sessions for the little ones and creatures — in person or by distance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="oracle-card">
+          <div class="oracle-card-inner">
+            <div class="oracle-face-down">
+              <div class="ofd-bg" style="background-image:url('../images/painting-star-back.jpeg')"></div>
+              <div class="ofd-glow"></div>
+              <div class="ofd-border"></div>
+            </div>
+            <div class="oracle-face-up">
+              <div class="session-card-image">
+                <img src="../images/painting-forest.jpeg" alt="Plant Medicine Journeys" loading="lazy" />
+              </div>
+              <div class="session-card-body">
+                <span class="section-label">Plant Spirit</span>
+                <h3>Plant Medicine Journeys</h3>
+                <p>Sacred cannabis-supported sessions for those who feel called.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="oracle-card">
+          <div class="oracle-card-inner">
+            <div class="oracle-face-down">
+              <div class="ofd-bg" style="background-image:url('../images/painting-star-back.jpeg')"></div>
+              <div class="ofd-glow"></div>
+              <div class="ofd-border"></div>
+            </div>
+            <div class="oracle-face-up">
+              <div class="session-card-image">
+                <img src="../images/painting-blue-flow.jpeg" alt="Space and Land Clearing" loading="lazy" />
+              </div>
+              <div class="session-card-body">
+                <span class="section-label">For Your Space</span>
+                <h3>Space &amp; Land Clearing</h3>
+                <p>Energetic harmonization for homes, land, and sacred spaces.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /oracle-grid -->
+
+      <div class="oracle-reset-wrap" id="oracle-reset-wrap">
+        <button class="btn oracle-action-btn" id="oracle-reset">Shuffle Again</button>
       </div>
 
-      <div class="session-card fade-in">
-        <div class="session-card-image">
-          <img src="../images/painting-cosmos.jpeg" alt="Distance Healing" loading="lazy" />
-        </div>
-        <div class="session-card-body">
-          <span class="section-label">At a Distance</span>
-          <h3>Distance Healing</h3>
-          <p>Reiki sent across space and time — as potent as in person.</p>
-        </div>
-      </div>
-
-      <div class="session-card fade-in">
-        <div class="session-card-image">
-          <img src="../images/painting-flower-burst.jpeg" alt="Kids, Babies and Animals" loading="lazy" />
-        </div>
-        <div class="session-card-body">
-          <span class="section-label">All Beings Welcome</span>
-          <h3>Kids, Babies &amp; Animals</h3>
-          <p>Gentle sessions for the little ones and creatures — in person or by distance.</p>
-        </div>
-      </div>
-
-      <div class="session-card fade-in">
-        <div class="session-card-image">
-          <img src="../images/painting-forest.jpeg" alt="Plant Medicine Journeys" loading="lazy" />
-        </div>
-        <div class="session-card-body">
-          <span class="section-label">Plant Spirit</span>
-          <h3>Plant Medicine Journeys</h3>
-          <p>Sacred cannabis-supported sessions for those who feel called.</p>
-        </div>
-      </div>
-
-      <div class="session-card fade-in">
-        <div class="session-card-image">
-          <img src="../images/painting-blue-flow.jpeg" alt="Space and Land Clearing" loading="lazy" />
-        </div>
-        <div class="session-card-body">
-          <span class="section-label">For Your Space</span>
-          <h3>Space &amp; Land Clearing</h3>
-          <p>Energetic harmonization for homes, land, and sacred spaces.</p>
-        </div>
-      </div>
-
-    </div>
+    </div><!-- /section-inner -->
   </section>
 
   <!-- QUOTE + ARRIVING + ACCESSIBILITY + CTA — shared magnolia journey -->
@@ -206,5 +270,113 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+  (function () {
+    var grid = document.getElementById('oracle-grid');
+    var resetWrap = document.getElementById('oracle-reset-wrap');
+    var isShuffling = false;
+
+    function fisherYates(arr) {
+      for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+      }
+      return arr;
+    }
+
+    function shuffleDeck() {
+      if (isShuffling) return;
+      isShuffling = true;
+
+      var cards = [].slice.call(grid.querySelectorAll('.oracle-card'));
+      var gRect = grid.getBoundingClientRect();
+      var cx = gRect.width / 2;
+      var cy = gRect.height / 2;
+
+      // Instantly unflip any revealed cards before animating
+      cards.forEach(function (card) {
+        var inner = card.querySelector('.oracle-card-inner');
+        if (inner) inner.style.transition = 'none';
+        card.classList.remove('revealed');
+      });
+      grid.offsetHeight; // flush
+
+      // Phase 1 — converge to center with a slight random rotation per card
+      cards.forEach(function (card, i) {
+        var r = card.getBoundingClientRect();
+        var dx = cx - (r.left - gRect.left + r.width / 2);
+        var dy = cy - (r.top - gRect.top + r.height / 2);
+        var rot = (Math.random() - 0.5) * 12;
+        card.style.zIndex = String(10 + i);
+        card.style.transition = 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)';
+        card.style.transform = 'translate(' + dx + 'px,' + dy + 'px) rotate(' + rot + 'deg) scale(0.88)';
+      });
+
+      // Phase 2 — glow, shuffle DOM invisibly, re-anchor cards to center
+      setTimeout(function () {
+        grid.classList.add('deck-glowing');
+
+        // Freeze transforms so DOM reorder doesn't visually shift cards
+        cards.forEach(function (c) { c.style.transition = 'none'; c.style.transform = ''; });
+        var shuffled = fisherYates(cards.slice());
+        shuffled.forEach(function (c) { grid.appendChild(c); });
+
+        // Reflow so browser computes new natural grid positions
+        grid.offsetHeight;
+
+        // Re-apply center offsets relative to each card's NEW grid slot
+        shuffled.forEach(function (card, i) {
+          var r = card.getBoundingClientRect();
+          var dx = cx - (r.left - gRect.left + r.width / 2);
+          var dy = cy - (r.top - gRect.top + r.height / 2);
+          var rot = (Math.random() - 0.5) * 12;
+          card.style.transform = 'translate(' + dx + 'px,' + dy + 'px) rotate(' + rot + 'deg) scale(0.88)';
+          card.style.zIndex = String(10 + i);
+        });
+
+        grid.offsetHeight; // flush before enabling transitions
+
+        // Phase 3 — scatter back to new positions
+        setTimeout(function () {
+          grid.classList.remove('deck-glowing');
+          resetWrap.classList.remove('visible');
+
+          shuffled.forEach(function (card) {
+            card.style.transition = 'transform 0.5s cubic-bezier(0.2, 0, 0.1, 1)';
+            card.style.transform = '';
+            card.style.zIndex = '';
+          });
+
+          setTimeout(function () {
+            shuffled.forEach(function (c) {
+              c.style.transition = '';
+              var inner = c.querySelector('.oracle-card-inner');
+              if (inner) inner.style.transition = '';
+            });
+            isShuffling = false;
+          }, 550);
+        }, 520);
+
+      }, 480);
+    }
+
+    // Click to reveal a card
+    grid.addEventListener('click', function (e) {
+      if (isShuffling) return;
+      var card = e.target.closest('.oracle-card');
+      if (!card || card.classList.contains('revealed')) return;
+      card.classList.add('revealed');
+      resetWrap.classList.add('visible');
+    });
+
+    document.getElementById('oracle-shuffle').addEventListener('click', shuffleDeck);
+    document.getElementById('oracle-reset').addEventListener('click', shuffleDeck);
+
+    // Silent shuffle on load for random starting order
+    setTimeout(function () {
+      fisherYates([].slice.call(grid.querySelectorAll('.oracle-card'))).forEach(function (c) { grid.appendChild(c); });
+    }, 60);
+  }());
+  </script>
 </body>
 </html>
