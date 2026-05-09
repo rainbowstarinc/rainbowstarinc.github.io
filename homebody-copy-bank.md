@@ -3,9 +3,36 @@
 
 ---
 
-## MUSICIAN OUTREACH — Personal Message
+## PERSONAL INTEREST OUTREACH — Friends & Musicians
 
-*Use this for direct messages to individual musicians. Warm and personal — not a mass blast.*
+*For people you know personally — friends who might want to come, musicians you'd love to have. Warm, not a pitch.*
+
+---
+
+Something I've been dreaming up.
+
+I've been sitting with an idea for a while now, and I think it's finally time to plant the seed.
+
+I want to create a gathering — intimate, acoustic, alive — where musicians and movers come together in the same space, blurring categories. Where the music is freeform and responsive, close enough to feel the breath behind it. Where dancing is just moving, resting is welcome, and nobody is performing for anyone.
+
+I'm calling it **Homebody**.
+
+It would be a pop-up series — summer 2026, Portland — held in backyards, living rooms, and other beautiful small spaces. Alcohol-free. Plant medicines welcome. Earnestly weird. Good company.
+
+The music follows the flow — a slow build, a peak, a dissolving. Musicians are invited to put down their instruments and move. Movers are invited to make sound.
+
+I'm reaching out to you specifically because I think you'd be either a perfect musician for this, a perfect mover, or both. I'd love to know — does this excite you? Would you want to be part of building it from the beginning?
+
+Reply back, or find more at **rainbowstar.net/homebody**.
+
+with love,
+[your name]
+
+---
+
+## MUSICIAN OUTREACH — Direct Message
+
+*For direct messages to individual musicians. Warm and personal — not a mass blast.*
 
 ---
 
@@ -13,13 +40,11 @@ Hey [name] —
 
 I'm putting together something I think you might love, and you came to mind immediately.
 
-I'm starting a small recurring movement gathering called **Homebody** — live acoustic music, free-form somatic movement, intimate setting. The first one is happening **Thursday, May 21** in my backyard here in Portland.
+I'm starting a pop-up movement gathering called **Homebody** — live acoustic music, free-form somatic movement, intimate setting. Summer 2026, Portland.
 
-The concept: musicians play live and unamplified (or close to it), responsive and freeform rather than performing a set. The music follows the room — a slow build, a peak, a dissolving. Musicians are also invited to put down their instruments and move. Movers are invited to make sound. The line between player and participant softens.
+The concept: musicians play live and unamplified (or close to it), responsive and freeform rather than performing a set. The music follows the flow — a slow build, a peak, a dissolving. Musicians are also invited to put down their instruments and move. Movers are invited to make sound. The line between player and participant blurs.
 
 The vibe is grounded, earthy, a little dorky. Nervous-system friendly. Alcohol-free, plant medicines welcome. Small enough to feel the whole group.
-
-I'm thinking 2–3 musicians per gathering, and I'd love to build a rotating roster over the 7-gathering series this summer. For May 21 I'm figuring out the lineup now.
 
 Would you be open to a conversation? Or if this is a yes already — even better.
 
@@ -48,7 +73,7 @@ You love music and movement but don't want a performance space. You're curious a
 **Practical things:**
 📅 Thursday evenings · beginning May 21, 2026
 📍 Indoor & outdoor locations in Portland, OR (location announced per gathering)
-💛 Sliding scale $15–30 · scholarship tickets available
+💛 Sliding scale $25–40 · scholarship tickets available
 🌿 Alcohol-free · plant medicines welcome with care and intention
 ✋ Consent culture · go at your own pace · all bodies welcome · floor work welcome
 
@@ -77,7 +102,7 @@ We're looking for 2–3 acoustic musicians per gathering. Each gathering has its
 
 **What we're looking for:**
 - Acoustic instruments, comfortable with freeform improvisation
-- Bluegrass, folk, world, experimental, or something in between
+- Folk, world, experimental, ambient, classical, jazz — all styles welcome
 - Willing to follow the room rather than lead it
 - Open to putting down the instrument and moving
 - Aligned with consent culture and a grounded, inclusive vibe
@@ -120,7 +145,7 @@ Live acoustic music from [musician names]. Free movement. No steps to learn, no 
 
 This is the first gathering in a seven-week summer series — each Thursday, a different theme, a different space.
 
-Sliding scale $15–30 · scholarship tickets available
+Sliding scale $25–40 · scholarship tickets available
 Link in bio to register or learn more 🌿
 
 ✦ alcohol-free · plant medicines welcome · nervous system friendly · all bodies welcome
@@ -139,7 +164,7 @@ calling musicians 🎵
 
 We're looking for acoustic musicians comfortable with freeform, improvisational playing. You'll follow the room, not lead it. You're also invited to put down your instrument and move.
 
-Bluegrass · folk · world · experimental · or something in between.
+Folk · world · experimental · ambient · classical · jazz · or something without a name.
 2–3 musicians per gathering. 7 Thursdays this summer.
 
 DM or email rainbowstar.inc.creative@gmail.com to learn more 🌿

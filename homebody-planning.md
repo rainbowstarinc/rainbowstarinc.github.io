@@ -86,7 +86,7 @@ earnestly weird · wholesome · grounded · dorky · good humans
 innocent connecting · embodied safety · homespun · community
 
 ### Music direction
-Freeform, somatic-friendly improv · bluegrass-adjacent · experimental · world music
+Freeform, somatic-friendly improv · all styles welcome · experimental · world · ambient · folk · jazz · classical · or something without a name
 Musicians may also move — this is part of the offering
 
 ---
