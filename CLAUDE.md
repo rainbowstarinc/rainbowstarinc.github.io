@@ -91,7 +91,24 @@ All styles are in `css/style.css` — no embedded `<style>` blocks in HTML files
 - About: `.photo-grid`
 - Shared utilities: `.hero-subtitle`, `.hero-tagline`, `.section-label`, `.section-title`, `.divider`, `.two-col`, `.fade-in`
 
+## Dev Server
+
+Always run Jekyll for local development — it handles Liquid templates and includes.
+
+**Start command:**
+```
+pkill -f jekyll 2>/dev/null; /usr/local/opt/ruby/bin/bundle exec jekyll serve --port 4000 --livereload > /tmp/jekyll.log 2>&1 &
+```
+
+- Runs on http://localhost:4000
+- Auto-rebuilds on file changes (watch is on by default)
+- LiveReload refreshes the browser automatically
+- Logs at `/tmp/jekyll.log`
+
+Kill all instances before starting a new one to avoid port conflicts.
+
 ## Rules
+- **Worktree warning:** At the start of each session, check `git worktree list`. If the working directory is not the main worktree, warn the user immediately — all work must happen on the main branch, not in a worktree.
 - Never add light/white backgrounds or break the dark cosmic theme
 - Original paintings are the hero visuals — never replace with stock imagery
 - Keep copy minimal, poetic, and spacious — avoid marketing language

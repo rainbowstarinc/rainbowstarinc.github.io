@@ -3,11 +3,19 @@ const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (toggle && navLinks) {
+  const closeNav = () => {
+    navLinks.classList.remove('open');
+    toggle.classList.remove('open');
+  };
   toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+  });
+  navLinks.addEventListener('click', (e) => {
+    if (e.target === navLinks) closeNav();
   });
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
+    link.addEventListener('click', closeNav);
   });
 }
 
