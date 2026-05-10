@@ -1,0 +1,30 @@
+title: RainbowStar
+description: Energy artist, healer, and painter based in Portland, OR — Reiki, sacred art, oracle readings, and somatic movement.
+url: "https://rainbowstar.net"
+baseurl: ""
+
+# Author
+author:
+  name: Kezia Zamora
+  email: rainbowstar.inc.creative@gmail.com
+
+# Build
+markdown: kramdown
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - "homebody-copy-bank.md"
+  - "homebody-planning.md"
+  - "homebody-flyer.html"
+  - "homebody-flyer-musicians.html"
+  - "homebody-flyer-teaser.html"
+  - "potential copy"
+  - "new images"
+  - vendor
+
+plugins:
+  - jekyll-seo-tag

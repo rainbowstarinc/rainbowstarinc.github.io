@@ -1,0 +1,31 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}" />
+  <link rel="canonical" href="{{ page.canonical }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.canonical }}" />
+  <meta property="og:title" content="{{ page.og_title | default: page.title }}" />
+  <meta property="og:description" content="{{ page.og_description | default: page.description }}" />
+  <meta property="og:image" content="{{ page.og_image }}" />
+  <meta property="og:image:alt" content="{{ page.og_image_alt }}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page.og_title | default: page.title }}" />
+  <meta name="twitter:description" content="{{ page.og_description | default: page.description }}" />
+  <meta name="twitter:image" content="{{ page.og_image }}" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  {% if page.json_ld %}
+  <script type="application/ld+json">
+  {{ page.json_ld }}
+  </script>
+  {% endif %}
+</head>

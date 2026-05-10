@@ -1,0 +1,14 @@
+<nav>
+  <a class="nav-logo" href="/">RainbowStar<span class="nav-logo-sub">energy artist</span></a>
+  <button class="nav-toggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/"{% if page.nav_active == 'home' %} class="nav-active"{% endif %}>Home</a></li>
+    <li><a href="/pages/sessions.html"{% if page.nav_active == 'sessions' %} class="nav-active"{% endif %}>Sessions</a></li>
+    <li><a href="/pages/gather.html"{% if page.nav_active == 'gather' %} class="nav-active"{% endif %}>Gather</a></li>
+    <li><a href="/pages/art.html"{% if page.nav_active == 'gallery' %} class="nav-active"{% endif %}>Gallery</a></li>
+    <li><a href="/pages/about.html"{% if page.nav_active == 'about' %} class="nav-active"{% endif %}>About</a></li>
+    <li><a href="/pages/book.html" class="nav-hello{% if page.nav_active == 'hello' %} nav-active{% endif %}">Hello</a></li>
+  </ul>
+</nav>
