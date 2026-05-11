@@ -1324,6 +1324,7 @@ footer a:hover { color: var(--white); }
   cursor: pointer;
   background: var(--cosmic);
   border: 1px solid rgba(201,168,76,0.08);
+  border-radius: 8px;
   transition: border-color 0.3s, transform 0.3s;
 }
 .gallery-item:hover {
@@ -1346,6 +1347,7 @@ footer a:hover { color: var(--white); }
   cursor: pointer;
   background: var(--cosmic);
   border: 1px solid rgba(201,168,76,0.08);
+  border-radius: 8px;
   transition: border-color 0.3s, transform 0.3s;
 }
 .gallery-item-triptych:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-3px); }
