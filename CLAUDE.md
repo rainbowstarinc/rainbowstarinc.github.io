@@ -97,10 +97,10 @@ Always run Jekyll for local development — it handles Liquid templates and incl
 
 **Start command:**
 ```
-pkill -f jekyll 2>/dev/null; /usr/local/opt/ruby/bin/bundle exec jekyll serve --port 4000 --livereload > /tmp/jekyll.log 2>&1 &
+pkill -f jekyll 2>/dev/null; /usr/local/opt/ruby/bin/bundle exec jekyll serve --port 4000 --livereload --host 0.0.0.0 > /tmp/jekyll.log 2>&1 &
 ```
 
-- Runs on http://localhost:4000
+- Runs on http://localhost:4000 (and LAN via `ipconfig getifaddr en0`)
 - Auto-rebuilds on file changes (watch is on by default)
 - LiveReload refreshes the browser automatically
 - Logs at `/tmp/jekyll.log`

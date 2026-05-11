@@ -291,8 +291,8 @@ nav_active: sessions
 
   <!-- SESSION DETAIL MODAL -->
   <div class="session-modal" id="session-modal" role="dialog" aria-modal="true" aria-labelledby="session-modal-title">
-    <button class="session-modal-close" id="session-modal-close">CLOSE ✕</button>
     <div class="session-modal-inner">
+      <button class="session-modal-close" id="session-modal-close" aria-label="Close">✕</button>
       <div class="session-modal-hero">
         <img id="session-modal-img" src="" alt="" loading="eager" />
         <div class="session-modal-hero-overlay"></div>
@@ -399,10 +399,12 @@ nav_active: sessions
       var modal = document.getElementById('session-modal');
       modal.classList.add('open');
       modal.scrollTop = 0;
+      document.documentElement.style.overflow = 'hidden';
     }
 
     window.closeSessionModal = function closeSessionModal() {
       var y = window._modalScrollY || 0;
+      document.documentElement.style.overflow = '';
       document.getElementById('session-modal').classList.remove('open');
       requestAnimationFrame(function () { window.scrollTo(0, y); });
     }

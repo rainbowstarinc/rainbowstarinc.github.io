@@ -48,6 +48,29 @@ json_ld: |
       <p class="hero-tagline">When I let go, magic finds me.</p>
     </div>
   </section>
+  <script>
+  (function () {
+    var el = document.querySelector('.hero-definition');
+    if (!el) return;
+    var line1 = 'in·cor·po·rat·ed — adj. given bodily form; embodied';
+    var line2 = 'from Latin in (into) + corpus (body)';
+    var full  = line1 + '\n' + line2;
+    var chars = full.length;
+    var delay    = 800;
+    var duration = 2500;
+    var interval = duration / chars;
+    el.textContent = '';
+    setTimeout(function () {
+      el.style.opacity = '1';
+      var i = 0;
+      var timer = setInterval(function () {
+        i++;
+        el.innerHTML = full.slice(0, i).replace('\n', '<br>');
+        if (i >= chars) clearInterval(timer);
+      }, interval);
+    }, delay);
+  }());
+  </script>
 
   <!-- INTRO -->
   <section class="intro">

@@ -209,13 +209,13 @@ nav_active: gallery
   </section>
 
   <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
     <img id="lightbox-img" src="" alt="" />
+    <button class="lightbox-btn lightbox-prev" onclick="prevImage()" aria-label="Previous">&#8592;</button>
+    <button class="lightbox-btn lightbox-next" onclick="nextImage()" aria-label="Next">&#8594;</button>
     <div class="lightbox-controls">
-      <button class="lightbox-btn" onclick="prevImage()">← Prev</button>
       <span class="lightbox-title" id="lightbox-title"></span>
-      <button class="lightbox-btn" onclick="nextImage()">Next →</button>
     </div>
-    <button class="lightbox-btn" style="position:absolute; top:1.5rem; right:2rem;" onclick="closeLightbox()">Close ✕</button>
   </div>
   <script>
     const paintings = [
@@ -240,7 +240,6 @@ nav_active: gallery
       { src: '/images/painting-flower-burst.jpeg', title: 'Invite Me' },
       { src: '/images/painting-forest.jpeg', title: 'Forest Intelligence' },
       { src: '/images/painting-lake-spirit.jpeg', title: 'Vesica Fellea' },
-      { src: '/images/painting-eclipse-top.jpeg', title: 'Eclipse' },
       { src: '/images/painting-eclipse-top.jpeg', title: 'Eclipse' },
       { src: '/images/painting-cosmic-vortex.jpeg', title: 'Cosmic Vortex' },
       { src: '/images/painting-garden-impressionist.jpeg', title: 'Birdsong in Color' },
