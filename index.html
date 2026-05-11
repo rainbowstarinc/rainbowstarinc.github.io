@@ -43,8 +43,9 @@ json_ld: |
     <div class="hero-content">
       <span class="hero-eyebrow">Welcome to</span>
       <h1>RainbowStar</h1>
-      <p style="font-family:var(--font-body); font-style:italic; font-size:1.1rem; letter-spacing:0.45em; color:#c4aee8; margin-bottom:1rem;">energy arts</p>
-      <p class="hero-tagline">When I surrender, magic can find me.</p>
+      <p style="font-family:var(--font-serif); font-style:normal; font-size:1.45rem; letter-spacing:0.4em; color:#c4aee8; margin-bottom:0;">incorporated</p>
+      <p class="hero-definition">in·cor·po·rat·ed — adj. given bodily form; embodied<br>from Latin in (into) + corpus (body)</p>
+      <p class="hero-tagline">When I let go, magic finds me.</p>
     </div>
   </section>
 
@@ -82,17 +83,15 @@ json_ld: |
           </div>
           <h3>Healing Sessions</h3>
           <p>Touch, sound, crystals, color, and cosmic guidance — woven into a single session tailored to your field.</p>
-          <br>
-          <a href="/pages/sessions" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem;">Explore Sessions</a>
+          <a href="/pages/sessions" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem; margin-top:auto;">Explore Sessions</a>
         </div>
         <div class="offering-card fade-in">
           <div class="offering-img">
-            <img src="/images/painting-star-compass.jpeg" alt="Star Compass — sacred geometry painting for oracle readings" loading="lazy" />
+            <img src="/images/painting-wheel.jpeg" alt="Sacred wheel painting — gatherings and circles with RainbowStar" loading="lazy" />
           </div>
-          <h3>Oracle</h3>
-          <p>Guidance through symbol, intuition, and the language of the soul. A reading for those at a threshold.</p>
-          <br>
-          <a href="/pages/oracle" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem;">Enter the Oracle</a>
+          <h3>Gatherings</h3>
+          <p>Circles, movement, and sacred community — spaces to come alive together in body and spirit.</p>
+          <a href="/pages/circles" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem; margin-top:auto;">Explore Gatherings</a>
         </div>
         <div class="offering-card fade-in">
           <div class="offering-img">
@@ -100,8 +99,7 @@ json_ld: |
           </div>
           <h3>Sacred Art</h3>
           <p>Original paintings that carry frequency. Pieces for your home, altar, or healing space.</p>
-          <br>
-          <a href="/pages/art" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem;">View the Gallery</a>
+          <a href="/pages/art" class="btn" style="font-size:0.55rem; padding: 0.7rem 1.5rem; margin-top:auto;">View the Gallery</a>
         </div>
       </div>
     </div>
@@ -142,11 +140,46 @@ json_ld: |
   </section>
 
   <!-- QUOTE -->
-  <section class="quote-band">
-    <blockquote>
-      if a miracle is happening,<br>
-      <span style="display:block; margin-top:0.4em;">i'm letting it.</span>
-    </blockquote>
+  <section class="quote-band" style="border-top:none; border-bottom:none; position:relative; overflow:hidden;">
+    <!-- Aurora blobs -->
+    <div class="aurora-blob aurora-blob-1"></div>
+    <div class="aurora-blob aurora-blob-2"></div>
+    <div class="aurora-blob aurora-blob-3"></div>
+    <!-- Content -->
+    <div style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:3rem;">
+      <div style="width:480px; height:480px; max-width:90vw; max-height:90vw; flex-shrink:0; border-radius:50%; overflow:hidden; position:relative; border:1px solid rgba(201,168,76,0.45); box-shadow: 0 0 30px rgba(201,168,76,0.22), 0 0 80px rgba(201,168,76,0.11), 0 0 140px rgba(123,79,166,0.14);">
+        <img src="/images/painting-star-compass.jpeg" alt="Star Compass — sacred geometry painting by RainbowStar" loading="lazy"
+             style="width:100%; height:100%; object-fit:cover;" />
+        <div style="position:absolute; inset:0; background: radial-gradient(ellipse at center, transparent 50%, rgba(10,11,24,0.8) 90%);"></div>
+      </div>
+      <blockquote>
+        if a miracle is happening,<br>
+        <span style="display:block; margin-top:0.4em;">i'm letting it.</span>
+      </blockquote>
+    </div>
+    <!-- Sparkles -->
+    <script>
+    (function () {
+      var sec = document.currentScript.parentElement;
+      for (var i = 0; i < 28; i++) {
+        var s = document.createElement('div');
+        var size = (Math.random() * 2.5 + 0.8).toFixed(1);
+        var gold = Math.random() > 0.45;
+        s.style.cssText =
+          'position:absolute;' +
+          'width:'  + size + 'px;' +
+          'height:' + size + 'px;' +
+          'border-radius:50%;' +
+          'background:' + (gold ? 'rgba(201,168,76,0.95)' : 'rgba(244,240,235,0.85)') + ';' +
+          'top:'  + (Math.random() * 100).toFixed(1) + '%;' +
+          'left:' + (Math.random() * 100).toFixed(1) + '%;' +
+          'animation:sparkle ' + (Math.random() * 3 + 1.5).toFixed(1) + 's ease-in-out ' + (Math.random() * 5).toFixed(1) + 's infinite;' +
+          'pointer-events:none;' +
+          'z-index:3;';
+        sec.appendChild(s);
+      }
+    }());
+    </script>
   </section>
   <script type="application/ld+json">
   {
