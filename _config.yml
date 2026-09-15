@@ -25,6 +25,7 @@ exclude:
   - "potential copy"
   - "new images"
   - vendor
+  - "pages/circles.html"
 
 plugins:
   - jekyll-seo-tag
