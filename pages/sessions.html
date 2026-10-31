@@ -355,9 +355,9 @@ nav_active: sessions
         img: '/images/painting-flower-burst.jpeg',
         imgAlt: 'Flower burst painting — gentle Reiki sessions for children, babies, and animals',
         leftHeading: 'Working with the little ones',
-        leftBody: '<p>Children, babies, and animals are often the most receptive recipients of energy work. They haven\'t learned yet to filter or doubt — they simply receive. Sessions are adapted to honor that sensitivity.</p><p>With young children, sessions are often shorter, lighter, and playful. With babies, the work is very gentle and quiet. With animals, I follow their lead completely — they choose how close, and for how long.</p><p>Distance sessions work beautifully for animals and little ones who might be too wriggly or overwhelmed for an in-person visit. The energy arrives just the same.</p>',
-        quote: '”Some people talk to animals. Not many listen though. That\'s the problem.”',
-        quoteAttrib: '― A.A. Milne, Winnie-the-Pooh',
+        leftBody: '<p>Children, babies, and animals receive energy work with particular ease — they haven\'t learned yet to doubt. Sessions follow their lead: playful for kids, quiet for babies, animal-guided for creatures. Distance works beautifully; they often receive even more freely without anyone physically in the room.</p>',
+        learnMoreUrl: '/pages/kids-animals',
+        learnMoreLabel: 'Full Story',
         rightHeading: 'Who comes',
         rightBullets: ['Anxious, sensitive, or highly aware children','Babies and toddlers in transition','Animals experiencing fear, grief, or illness','Pets facing end of life','Families navigating big change together','Parents who want support alongside their child'],
         bookingUrl: 'https://calendly.com/rainbowstar-inc-creative/keiki-reiki-kids-and-animals'
@@ -411,7 +411,11 @@ nav_active: sessions
         });
         bookingHtml += '</div>';
       } else if (d.bookingUrl) {
-        bookingHtml = '<div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(201,168,76,0.12);"><a href="' + d.bookingUrl + '" target="_blank" rel="noopener" class="btn btn-solid">Book</a></div>';
+        bookingHtml = '<div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(201,168,76,0.12);"><a href="' + d.bookingUrl + '" target="_blank" rel="noopener" class="btn btn-solid">Book</a>';
+        if (d.learnMoreUrl) {
+          bookingHtml += '<a href="' + d.learnMoreUrl + '" class="btn">' + (d.learnMoreLabel || 'Learn More') + '</a>';
+        }
+        bookingHtml += '</div>';
       }
       document.getElementById('session-modal-body').innerHTML =
         '<div style="color:var(--white-soft);">' + d.leftBody + '</div>' +
