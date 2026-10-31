@@ -134,9 +134,9 @@ nav_active: sessions
                 <img src="/images/painting-forest.jpeg" alt="Forest painting — plant spirit medicine and sacred cannabis-supported healing journeys" loading="lazy" />
               </div>
               <div class="session-card-body">
-                <span class="section-label">Plant Spirit</span>
-                <h3>Plant Medicine Journeys</h3>
-                <p>Sacred cannabis-supported sessions for those who feel called.</p>
+                <span class="section-label">Cannabliss</span>
+                <h3>Cannabliss</h3>
+                <p>A self-led cannabis exploration group — held in sacred space.</p>
               </div>
             </div>
           </div>
@@ -363,14 +363,16 @@ nav_active: sessions
         bookingUrl: 'https://calendly.com/rainbowstar-inc-creative/keiki-reiki-kids-and-animals'
       },
       'plant-medicine': {
-        label: 'Plant Spirit',
-        title: 'Plant Medicine Journeys',
+        label: 'Cannabliss',
+        title: 'Cannabliss',
         img: '/images/painting-forest.jpeg',
-        imgAlt: 'Forest painting — plant spirit medicine and sacred healing journeys',
-        leftHeading: 'Plant & presence',
-        leftBody: '<p>Plant spirit medicine has been used for millennia as a doorway — into the body, into the subconscious, into the knowing that lives beneath ordinary awareness. Cannabis, when held in a sacred container, can soften defenses and deepen the energetic work profoundly.</p><p>These sessions are longer, more spacious, and more intentional than a standard session. We open together, journey together, and integrate together. The plant is a collaborator, not a shortcut.</p><p>These sessions are for those who feel a genuine call — not curiosity alone, but readiness. We will speak before we meet to ensure it\'s the right fit.</p>',
+        imgAlt: 'Forest painting — Cannabliss cannabis exploration group with RainbowStar',
+        leftHeading: 'Your journey, held',
+        leftBody: '<p>Cannabliss is a group exploration — intimate, intentional, and self-led. You bring your own cannabis and your own intention. I bring the container: held space, energetic support, and steady presence as you journey inward.</p><p>There is no guide in the traditional sense. The plant is your guide. I am here to hold the field — to witness, to tend, to weave Reiki through the gathering as you go wherever you\'re called to go.</p><p>This is for those who feel ready to explore cannabis as a spiritual tool: in community, with energy work woven throughout.</p>',
         rightHeading: 'What to know',
-        rightBullets: ['Sessions held in Portland, OR — in person only','Cannabis is legal for adults in Oregon','A pre-session conversation is required','Set, setting, and intention are everything','Sessions run longer — allow 3+ hours','Integration support is offered after']
+        rightBullets: ['Group format — intimate and intentional','Held virtually — join from your own sacred space','Bring your own cannabis (legal where you are)','Self-led: you set your own dose and direction','Energetic support and Reiki woven throughout','Integration time built into every gathering'],
+        learnMoreUrl: '/pages/plant-medicine',
+        learnMoreLabel: 'Full Story'
       },
       'space-clearing': {
         label: 'For Your Space',
@@ -416,6 +418,8 @@ nav_active: sessions
           bookingHtml += '<a href="' + d.learnMoreUrl + '" class="btn">' + (d.learnMoreLabel || 'Learn More') + '</a>';
         }
         bookingHtml += '</div>';
+      } else if (d.learnMoreUrl) {
+        bookingHtml = '<div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(201,168,76,0.12);"><a href="' + d.learnMoreUrl + '" class="btn btn-solid">' + (d.learnMoreLabel || 'Learn More') + '</a></div>';
       }
       document.getElementById('session-modal-body').innerHTML =
         '<div style="color:var(--white-soft);">' + d.leftBody + '</div>' +
