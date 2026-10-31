@@ -5,6 +5,9 @@ Static website for RainbowStar — a multidimensional healing and creative pract
 
 **Core feeling to preserve:** *"This is beautiful… I feel something… I want to explore more."*
 
+## Todo List
+Check `TODO.md` at the start of each session for pending tasks.
+
 ## Frontend Design Skill
 Always invoke the `frontend-design` skill for any UI/frontend changes before implementing. This ensures design decisions align with the visual language below.
 

@@ -910,6 +910,14 @@ footer a:hover { color: var(--white); }
 .oracle-face-up .session-card-image {
   flex-shrink: 0;
 }
+.face-up-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  border-radius: 9px;
+}
 
 /* Reset button */
 .oracle-reset-wrap {
@@ -1817,6 +1825,32 @@ footer a:hover { color: var(--white); }
   color: var(--gold);
   margin-top: 0.55rem;
   opacity: 0.85;
+}
+
+/* Consultation medallion — aurora glow on the outer circle */
+.consultation-medallion {
+  position: relative;
+  isolation: isolate;
+}
+.consultation-medallion::before,
+.consultation-medallion::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -15%;
+  filter: blur(52px);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+  pointer-events: none;
+}
+.consultation-medallion::before {
+  background: radial-gradient(ellipse at 42% 50%, rgba(123,79,166,0.65) 0%, rgba(58,123,213,0.4) 45%, transparent 70%);
+  opacity: 0.75;
+  animation: auroraBlob1 5s ease-in-out infinite;
+}
+.consultation-medallion::after {
+  background: radial-gradient(ellipse at 58% 50%, rgba(201,168,76,0.5) 0%, rgba(123,79,166,0.35) 45%, transparent 70%);
+  opacity: 0.65;
+  animation: auroraBlob2 7s ease-in-out infinite;
 }
 
 /* Responsive */
